@@ -1,0 +1,25 @@
+<div *ngIf="clinic._id != ''">
+  <h3>Department Details</h3>
+  <table class="table table-danger">
+    <thead>
+      <th>ID</th>
+      <th>governorate</th>
+      <th>address</th>
+      <th>startTime</th>
+      <th>endTime</th>
+      <th>Operations</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ clinic._id }}</td>
+        <td>{{ clinic.governorate }}</td>
+        <td>{{ clinic.address}}</td>
+        <td>{{clinic.startTime}}</td>
+        <td>{{clinic.endTime}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="delete()">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

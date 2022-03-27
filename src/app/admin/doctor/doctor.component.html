@@ -1,1 +1,33 @@
-<p>doctor works!</p>
+<div class="container">
+   <table *ngIf="doctors" class="table  table-hover">
+     <thead>
+       <tr>
+        <th>FLirstName</th>
+        <th>LastName</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>specializattd</th>
+        <th>vezeeta</th>
+        <th>clinicGovernorate</th>
+        <th>clinicAddress</th>
+        <th>clinicStartTime</th>
+        <th>clinicEndTime</th>
+      </tr>
+     </thead>
+     <tr *ngFor="let doctor of doctors">
+      <!-- <td>{{doctor._id}}</td> -->
+      <td>{{doctor.userRef?.fname}}</td>
+      <td>{{doctor.userRef?.lname}}</td>
+      <td>{{doctor.userRef?.age}}</td>
+      <td>{{doctor.userRef?.gender}}</td>
+      <td>{{doctor.specialization}}</td>
+      <td>{{doctor.vezeeta}}</td>
+      <td>{{doctor.clinic?.governorate}}</td>
+      <td>{{doctor.clinic?.address}}</td>
+      <td>{{doctor.clinic?.startTime}}</td>
+      <td>{{doctor.clinic?.endTime}}</td>
+     </tr>
+   </table>
+</div>
+
+<p>hhhhhhhhhhhh</p>

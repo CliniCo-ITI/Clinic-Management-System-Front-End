@@ -13,6 +13,18 @@ import { ReportListComponent } from './report/report-list/report-list.component'
 import { ClinicAddComponent } from './clinic/clinic-add/clinic-add.component';
 import { ClinicListComponent } from './clinic/clinic-list/clinic-list.component';
 import { ClinicEditComponent } from './clinic/clinic-edit/clinic-edit.component';
+import {HttpClientModule } from '@angular/common/http';
+import { AddDoctorComponent } from './doctor/add-doctor/add-doctor.component';
+import { FormsModule } from '@angular/forms';
+import { ClinicDetailsComponent } from './clinic/clinic-details/clinic-details.component';
+import { DeleteClinicComponent } from './clinic/delete-clinic/delete-clinic.component';
+import { AddMedicinComponent } from './medicine/add-medicin/add-medicin.component';
+import { MedicineDetailsComponent } from './medicine/medicine-details/medicine-details.component';
+import { UpdateMedicinComponent } from './medicine/update-medicin/update-medicin.component';
+import { DeleteMedicinComponent } from './medicine/delete-medicin/delete-medicin.component';
+import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
+import * as i3 from "@angular/cdk/scrolling";
+import {TableModule} from 'primeng/table'
 
 
 @NgModule({
@@ -27,11 +39,21 @@ import { ClinicEditComponent } from './clinic/clinic-edit/clinic-edit.component'
     ReportListComponent,
     ClinicAddComponent,
     ClinicListComponent,
-    ClinicEditComponent
+    ClinicEditComponent,
+    AddDoctorComponent,
+    ClinicDetailsComponent,
+    DeleteClinicComponent,
+    AddMedicinComponent,
+    MedicineDetailsComponent,
+    UpdateMedicinComponent,
+    DeleteMedicinComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    TableModule,
   ]
 })
 export class AdminModule { }

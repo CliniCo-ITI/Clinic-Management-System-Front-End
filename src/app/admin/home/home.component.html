@@ -1,4 +1,6 @@
-<div class="container">
+
+<!--
+  <div class="container">
   <ul>
     <li class=" active">
       <a class="" href="" routerLink="">Home <span class="sr-only">(current)</span></a>
@@ -19,6 +21,15 @@
       <a class="" href="" routerLink="edit_receptionist">edit_receptionists</a>
     </li>
     <li class="">
+      <a class="" href="" routerLink="list_clinic">cliniclist</a>
+    </li>
+    <li class="">
+      <a class="" href="" routerLink="add_clinc">addClinc</a>
+    </li>
+    <li class="">
+      <a class="" href="" routerLink="edit_clinc">editClinc</a>
+    </li>
+    <li class="">
       <a class="" href="" routerLink="list_receptionist">list_receptionists</a>
     </li>
     <li class="">
@@ -29,4 +40,56 @@
     </li>
   </ul>
   <router-outlet></router-outlet>
+</div> -->
+
+
+<div class="row g-0 d-flex">
+    <div id="sideNave" class="col-md-3 col-2">
+      <div class="row g-0">
+      <ul >
+        <li class=" active">
+          <!-- <span class="fa fa-star"></span> -->
+          <i class="pi pi-check"></i>
+          <a class="" href="" routerLink="">Dashboard<span class="sr-only">(current)</span>
+
+
+          </a>
+        </li>
+        <li class="">
+          <a class="" href="" routerLink="profile">profile</a>
+        </li>
+
+        <li class="">
+          <a class="" href="" routerLink="doctor">doctors</a>
+        </li>
+        <!-- <li class="">
+          <a class="" href="" routerLink="add_receptionist">add_receptionists</a>
+        </li> -->
+        <!-- <li class="">
+          <a class="" href="" routerLink="edit_receptionist">edit_receptionists</a>
+        </li> -->
+        <li class="">
+          <a class="" href="" routerLink="list_clinic">clinics</a>
+        </li>
+        <!-- <li class="">
+          <a class="" href="" routerLink="add_clinc">addClinc</a>
+        </li> -->
+        <!-- <li class="">
+          <a class="" href="" routerLink="edit_clinc">editClinc</a>
+        </li> -->
+        <li class="">
+          <a class="" href="" routerLink="list_receptionist">receptionists</a>
+        </li>
+        <li class="">
+          <a class="" href="" routerLink="medicine">medicines</a>
+        </li>
+        <li class="">
+          <a class="" href="" routerLink="report">reports</a>
+        </li>
+      </ul>
+    </div>
+      <router-outlet></router-outlet>
+    </div>
+  <div class="col-md-9 col-10 uuu"></div>
 </div>
+

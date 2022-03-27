@@ -7,7 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { CoreModule } from './core/core.module';
 import { AdminModule } from './admin/admin.module';
-
+import {HttpClientModule} from '@angular/common/http';
+import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
+import * as i3 from "@angular/cdk/scrolling";
+import {TableModule} from 'primeng/table'
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { AdminModule } from './admin/admin.module';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    AdminModule
+    AdminModule,
+    HttpClientModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

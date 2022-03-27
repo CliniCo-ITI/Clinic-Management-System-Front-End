@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Doctor_Type } from 'src/app/models/doctor';
+import { DoctorService } from '../services/doctor.service';
 
 @Component({
   selector: 'app-doctor',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorComponent implements OnInit {
 
-  constructor() { }
+  doctors:Doctor_Type[]|any = []
+  constructor(public doctorSer :DoctorService,public router:Router,public ar:ActivatedRoute) { }
+
 
   ngOnInit(): void {
+    this.doctorSer.getAllDoctors().subscribe(
+      {next:data=>{this.doctors=data;console.log(this.doctors)}}
+      )
   }
-
 }

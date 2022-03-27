@@ -1,0 +1,26 @@
+<div *ngIf="showClinc._id != ''">
+  <h3>Clinic Details</h3>
+  <table class="table table-primary">
+    <thead>
+      <th>ID</th>
+      <th>governorate</th>
+      <th>address</th>
+      <th>startTime</th>
+      <th>endTime</th>
+      <th>options</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ showClinc._id }}</td>
+        <td>{{ showClinc.governorate }}</td>
+        <td>{{ showClinc.address }}</td>
+        <td>{{ showClinc.startTime }}</td>
+        <td>{{ showClinc.startTime }}</td>
+        <td>{{ showClinc.endTime }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="back()">Back to list</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

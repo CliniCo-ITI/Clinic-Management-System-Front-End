@@ -1,0 +1,28 @@
+<div *ngIf="showMedicin._id != ''">
+  <h3>Clinic Details</h3>
+  <table class="table table-primary">
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>productionDate</th>
+      <th>expirationDate</th>
+      <th>price</th>
+      <th>description</th>
+      <th>clinics Count</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ showMedicin._id }}</td>
+        <td>{{ showMedicin.name }}</td>
+        <td>{{ showMedicin.productionDate}}</td>
+        <td>{{ showMedicin.expirationDate }}</td>
+        <td>{{ showMedicin.price }}</td>
+        <td>{{ showMedicin.description }}</td>
+        <td>{{ showMedicin.clinics.length}}</td>
+        <td>
+          <button class="btn btn-primary" (click)="back()">Back to list</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

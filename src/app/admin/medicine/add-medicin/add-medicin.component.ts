@@ -6,35 +6,35 @@ import { ClinicService } from '../../services/clinic.service';
 import { MedicinService } from '../../services/medicin.service';
 
 @Component({
-  selector: 'app-clinic-add',
-  templateUrl: './clinic-add.component.html',
-  styleUrls: ['./clinic-add.component.css']
+  selector: 'app-add-medicin',
+  templateUrl: './add-medicin.component.html',
+  styleUrls: ['./add-medicin.component.css']
 })
-export class ClinicAddComponent implements OnInit {
+export class AddMedicinComponent implements OnInit {
 
-  medicinsRef:string[] = [];
-  medicins:Medicin[]|any = [];
-  clinc: Clinc = new Clinc("","","","","",this.medicinsRef);
+  clinicRef:string[] = [];
+  clinics:Clinc[]|any = [];
+  medicine: Medicin = new Medicin("","",new Date,new Date,0,"",this.clinicRef);
   constructor(
     public clincSer:ClinicService,
     public router:Router,
     public medicinSer:MedicinService
     ) { }
   save(){
-    this.clincSer.addClinc(this.clinc).subscribe({
+    this.medicinSer.addMedicin(this.medicine).subscribe({
       next: (res) => console.log(res),
       error: (err) => console.log(err),
       complete: () => console.log('added'),
     });
-    this.router.navigate(['admin/list_clinic']);
+    this.router.navigate(['admin/MedicineList']);
   }
   ngOnInit(): void {
-    this.getAllMedicins();
+    this.getAllClinics();
   }
-  getAllMedicins() {
-    this.medicinSer.getMedicins().subscribe({
+  getAllClinics() {
+    this.clincSer.getCliincs().subscribe({
       next: (res) => {
-        this.medicins = res;
+        this.clinics = res;
         // console.log(res);
       },
       error: (err) => {
@@ -45,6 +45,7 @@ export class ClinicAddComponent implements OnInit {
   }
 
   add(id:string){
-    this.medicinsRef.push(id)
+    this.clinicRef.push(id)
   }
+
 }
