@@ -13,13 +13,13 @@ import { AdminModule } from './admin/admin.module';
   declarations: [
     AppComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    AdminModule
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

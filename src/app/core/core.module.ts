@@ -2,21 +2,24 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import {PasswordModule} from 'primeng/password';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import {DividerModule} from 'primeng/divider'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent
   ],
   imports: [
-    CommonModule,PasswordModule,BrowserAnimationsModule,FormsModule,DividerModule
+    CommonModule,BrowserAnimationsModule,FormsModule,FontAwesomeModule
   ],
   exports:[
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FontAwesomeModule
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+}
