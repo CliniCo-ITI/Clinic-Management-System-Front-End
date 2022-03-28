@@ -1,0 +1,58 @@
+<div class="container-fluid" id="content">
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Clinic Management system</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Receptionist Profile</p>
+                <li>
+                    <a [routerLink]="['/profile']" data-toggle="collapse">Profile</a>
+
+                </li>
+
+                <li class="nav-item dropdown" ngbDropdown>
+                    <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
+                        Invoice
+                    </a>
+                    <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarScrollingDropdown">
+                        <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/list']">List</a></li>
+                        <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/add']">Add</a></li>
+                        <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/edit']">Edit</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a [routerLink]="['/doctorAppointment']" data-toggle="collapse">Doctors Appointment</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+    <div class="right">
+        <div class="personalImg">
+            <img src="#">
+            <button>Change Photo</button>
+        </div>
+        <table class="table table-hover table-bordered col-lg-12 col-sm-12">
+            <thead >
+                <th>Id</th>
+                <th>Payment Method</th>
+                <th>Total Amount</th>
+                <th>Total Paid</th>
+                <th>Amount Left</th>
+                <th>Operation</th>
+                
+            </thead>
+            <tbody>
+                <tr >
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

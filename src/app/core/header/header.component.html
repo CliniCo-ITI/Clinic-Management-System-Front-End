@@ -14,14 +14,19 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" [routerLink]="['/invoiceList']">Invoice</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" [routerLink]="['/addInvoice']">Add Invoice</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" [routerLink]="['/EditInvoice']">Edit Invoice</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/profileReceptionst']">profile receptionst</a>
+        </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
           <div class="dropdown-menu">
@@ -44,3 +49,4 @@
   Hello from angular
   2 Days left.
 </div>
+

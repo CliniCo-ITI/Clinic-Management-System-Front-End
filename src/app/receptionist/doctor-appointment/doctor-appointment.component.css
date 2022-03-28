@@ -1,0 +1,135 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+
+.dropdown-menu{
+    background-color:#fff;
+}
+
+.dropdown-menu>li>a{
+    background-color:#fff;
+    color:#03a9f4 ;
+   font-size: 15px;
+   font-weight: bold;
+}
+
+
+#sidebar>.list-unstyled>.nav-item>.dropdown-menu>li>.dropdown-item:hover{
+    background-color: #eee;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background:#03a9f4;
+    color: #fff;
+    transition: all 0.3s;
+    border-radius: 6px;
+    }
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background:#03a9f4;
+    border-bottom: 3px solid white;
+    border-radius: 15px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border: solid 2px white;
+    border-radius: 15px;
+    text-align: center;
+    background-color: white;
+    color: #03a9f4;
+    padding: 0px 5px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.2em;
+    display: block;
+    
+}
+
+#sidebar ul li a:hover {
+    color:#03a9f4;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background:#03a9f4;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background:#03a9f4;
+}
+
+.dropdown-item:hover{
+    background-color: #03a9f4;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+/* @media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+} */
+
+#content{
+    display: flex;
+}
+
+
+
+
+
+
+
+

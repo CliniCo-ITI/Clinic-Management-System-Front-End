@@ -1,0 +1,87 @@
+
+
+
+<div class="container-fluid" id="list-invoice">
+
+
+
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+      <div class="sidebar-header">
+          <h3>Clinic Management system</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+          <p>Add Invoices</p>
+          <li>
+              <a [routerLink]="['/profile']" data-toggle="collapse">Profile</a>
+
+          </li>
+
+          <li class="nav-item dropdown" ngbDropdown>
+              <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" ngbDropdownToggle>
+                  Invoice
+              </a>
+              <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarScrollingDropdown">
+                  <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/list']">List</a></li>
+                  <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/add']">Add</a></li>
+                  <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/edit']">Edit</a></li>
+              </ul>
+          </li>
+          <li>
+              <a [routerLink]="['/doctorAppointment']" data-toggle="collapse">Doctors Appointment</a>
+          </li>
+
+      </ul>
+  </nav>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ============================== -->
+
+
+  <div class="container">
+    <div class="row mb-3">
+      <label for="inputPayment" class="col-sm-2 col-form-label">Payment</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputPayment" [(ngModel)]="invoice.paymentMethod">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputTotalAmount" class="col-sm-2 col-form-label">Total Amount</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputTotalAmount" [(ngModel)]="invoice.totalAmount">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="inputTotalPaid" class="col-sm-2 col-form-label">Total Paid</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="inputTotal" [(ngModel)]="invoice.totalPaid">
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label for="inputAmountLeft" class="col-sm-2 col-form-label">Amount Left</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="inputAmountLeft"  [(ngModel)]="invoice.amountLeft">
+        </div>
+      </div>
+    
+    
+    <button type="submit" class="btn btn-primary" (click)="addInvoice()" id="btnAdd">Add</button>
+
+
+   
+  </div>
+
+    </div>
