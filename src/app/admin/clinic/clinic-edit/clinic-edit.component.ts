@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Clinc } from 'src/app/models/clinic';
 import { ClinicService } from '../../services/clinic.service';
-
+import Swal from "sweetalert2"
 @Component({
   selector: 'app-clinic-edit',
   templateUrl: './clinic-edit.component.html',
@@ -18,7 +18,26 @@ export class ClinicEditComponent implements OnInit {
     public ar:ActivatedRoute
   ) {}
   update() {
-    if( confirm("are you sure?") == true){
+
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You will not be able to recover this updated item!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, update it!',
+      cancelButtonText: 'No, keep it!',
+    }).then((result) => {
+      if (result.value) {
+        this.updated(this.clinicId);
+      }
+      this.router.navigate(['/admin/list_clinic']);
+    });
+
+  }
+  updated(id:string|null){
+
+
       this.ar.params.subscribe(data=>{
         console.log(data['id']);
         this.clincSer.editClinic(data['id'],this.updateClinic).subscribe({
@@ -36,10 +55,6 @@ export class ClinicEditComponent implements OnInit {
         this.router.navigate(['admin/list_clinic']);
         // console.log(this.updateClinic)
       })
-    }else{
-      this.router.navigate(['admin/list_clinic']);
-    }
-
   }
   ngOnInit(): void {
     if (this.clinicId != "") {

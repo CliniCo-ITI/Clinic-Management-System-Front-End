@@ -47,20 +47,22 @@
     <div id="sideNave" class="col-md-3 col-2">
       <div class="row g-0">
       <ul >
-        <li class=" active">
+         <li class=" active">
           <!-- <span class="fa fa-star"></span> -->
-          <i class="pi pi-check"></i>
-          <a class="" href="" routerLink="">Dashboard<span class="sr-only">(current)</span>
+          <a routerLink="/admin" ><span class="pi pi-palette"></span></a>
+          <a class="" href="" routerLink="/admin" class="hide">Dashboard<span class="sr-only">(current)</span>
 
 
           </a>
         </li>
         <li class="">
-          <a class="" href="" routerLink="profile">profile</a>
+          <a routerLink="profile" ><span class="pi pi-user"></span></a>
+          <a class="" href="" class="hide">profile</a>
         </li>
 
         <li class="">
-          <a class="" href="" routerLink="doctor">doctors</a>
+          <a  routerLink="doctor"><span class="pi pi-users"></span></a>
+          <a class="" href="" class="hide">doctors</a>
         </li>
         <!-- <li class="">
           <a class="" href="" routerLink="add_receptionist">add_receptionists</a>
@@ -69,7 +71,8 @@
           <a class="" href="" routerLink="edit_receptionist">edit_receptionists</a>
         </li> -->
         <li class="">
-          <a class="" href="" routerLink="list_clinic">clinics</a>
+         <a routerLink="list_clinic"> <span class="fa fa-hospital-o"></span></a>
+          <a class="" href=""  routerLink="list_clinic"  class="hide">clinics</a>
         </li>
         <!-- <li class="">
           <a class="" href="" routerLink="add_clinc">addClinc</a>
@@ -77,15 +80,18 @@
         <!-- <li class="">
           <a class="" href="" routerLink="edit_clinc">editClinc</a>
         </li> -->
-        <li class="">
-          <a class="" href="" routerLink="list_receptionist">receptionists</a>
+        <li class="" >
+          <a routerLink="list_receptionist" ><span class="pi pi-users" ></span></a>
+          <a class="" href="" routerLink="list_receptionist" class="hide">receptionists</a>
         </li>
         <li class="">
-          <a class="" href="" routerLink="medicine">medicines</a>
+          <a routerLink="medicine"><span class="pi pi-heart-fill"></span></a>
+          <a class="" href=""  class="hide">medicines</a>
         </li>
-        <li class="">
-          <a class="" href="" routerLink="report">reports</a>
-        </li>
+        <!-- <li class="">
+          <a  href="" routerLink="report"><span class="pi pi-wallet"></span></a>
+          <a class="" class="hide">reports</a>
+        </li>-->
       </ul>
     </div>
       <router-outlet></router-outlet>

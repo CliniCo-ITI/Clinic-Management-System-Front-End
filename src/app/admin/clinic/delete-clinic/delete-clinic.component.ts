@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Clinc } from 'src/app/models/clinic';
 import { ClinicService } from '../../services/clinic.service';
-
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-delete-clinic',
@@ -35,7 +35,40 @@ export class DeleteClinicComponent implements OnInit {
     }
   }
   delete() {
-    if( confirm("are you sure?") == true){
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You will not be able to recover this deleted item!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, keep it!',
+    }).then((result) => {
+      if (result.value) {
+        this.deleteCliinc(this.clinicId);
+      }
+      this.router.navigate(['/admin/list_clinic']);
+    });
+
+    // if( confirm("are you sure?") == true){
+    //   this.clinicSer.deleteClinic(this.clinicId!).subscribe({
+    //     next: (res) => {
+    //       console.log(res);
+    //     },
+    //     error: (err) => {
+    //       console.log(err);
+    //     },
+    //     complete: () => {
+    //       console.log('deleted');
+    //     },
+    //   });
+    //   this.router.navigate(['admin/list_clinic']);
+    // }else{
+    //   this.router.navigate(['admin/list_clinic']);
+    // }
+  }
+
+  deleteCliinc(id:string|null){
       this.clinicSer.deleteClinic(this.clinicId!).subscribe({
         next: (res) => {
           console.log(res);
@@ -47,11 +80,6 @@ export class DeleteClinicComponent implements OnInit {
           console.log('deleted');
         },
       });
-      this.router.navigate(['admin/list_clinic']);
-    }else{
-      this.router.navigate(['admin/list_clinic']);
-    }
   }
-
 
 }

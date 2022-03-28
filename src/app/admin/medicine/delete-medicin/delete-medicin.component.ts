@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Clinc } from 'src/app/models/clinic';
 import { Medicin } from 'src/app/models/medicin';
 import { MedicinService } from '../../services/medicin.service';
-
+import Swal  from 'sweetalert2';
 @Component({
   selector: 'app-delete-medicin',
   templateUrl: './delete-medicin.component.html',
@@ -35,7 +35,24 @@ export class DeleteMedicinComponent implements OnInit {
     }
   }
   delete() {
-    if( confirm("are you sure?") == true){
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You will not be able to recover this deleted item!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, keep it!',
+    }).then((result) => {
+      if (result.value) {
+        this.deleteCliinc(this.medicinId);
+      }
+      this.router.navigate(['admin//MedicineList']);
+    });
+
+  }
+
+  deleteCliinc(id:string|null){
       this.medicinSer.deleteMedicin(this.medicinId!).subscribe({
         next: (res) => {
           console.log(res);
@@ -47,9 +64,23 @@ export class DeleteMedicinComponent implements OnInit {
           console.log('deleted');
         },
       });
-      this.router.navigate(['admin//MedicineList']);
-    }else{
-      this.router.navigate(['admin//MedicineList']);
-    }
   }
+  // delete() {
+  //   if( confirm("are you sure?") == true){
+  //     this.medicinSer.deleteMedicin(this.medicinId!).subscribe({
+  //       next: (res) => {
+  //         console.log(res);
+  //       },
+  //       error: (err) => {
+  //         console.log(err);
+  //       },
+  //       complete: () => {
+  //         console.log('deleted');
+  //       },
+  //     });
+  //     this.router.navigate(['admin//MedicineList']);
+  //   }else{
+  //     this.router.navigate(['admin//MedicineList']);
+  //   }
+  // }
 }
