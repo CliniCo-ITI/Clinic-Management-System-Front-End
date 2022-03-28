@@ -11,6 +11,7 @@ import { RouterModule,Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ReceptionistModule } from './receptionist/receptionist.module';
 import { ProfileComponent } from './receptionist/profile/profile.component';
+import { AdminModule } from './admin/admin.module';
 
 const routes:Routes=[
   
@@ -21,17 +22,14 @@ const routes:Routes=[
   declarations: [
     AppComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     CoreModule,
-    InvoiceModule,
-    ReceptionistModule,
-    RouterModule.forRoot(routes)
-  
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
