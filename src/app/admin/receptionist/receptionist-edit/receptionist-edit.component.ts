@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/models/user';
-import { Receptionist } from 'src/app/models/receptionist';
-import { Clinc } from 'src/app/models/clinic';
+import { User } from '../../../models/user';
+import { Receptionist } from '../../../models/receptionist';
+import { Clinc } from '../../../models/clinic';
 import { RecepService } from '../../services/recep.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';

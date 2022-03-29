@@ -1,7 +1,7 @@
 import { Component, ElementRef,ViewChild,OnInit } from '@angular/core';
-import { User } from 'src/app/models/user';
-import { Doctor } from 'src/app/models/doctor';
-import { Clinc } from 'src/app/models/clinic';
+import { User } from '../../../models/user';
+import { Doctor } from '../../../models/doctor';
+import { Clinc } from '../../../models/clinic';
 import { DoctorService } from '../../services/doctor.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';

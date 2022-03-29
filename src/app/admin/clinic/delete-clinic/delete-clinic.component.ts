@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Clinc } from 'src/app/models/clinic';
+import { Clinc } from '../../../models/clinic';
 import { ClinicService } from '../../services/clinic.service';
 import Swal from 'sweetalert2'
 

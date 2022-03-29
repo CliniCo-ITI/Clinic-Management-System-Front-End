@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Clinc } from 'src/app/models/clinic';
+import { Clinc } from '../../models/clinic';
 
 
 @Injectable({

@@ -1,48 +1,41 @@
-<div class="container-fluid">
-  <div >
-    <table class="table mt-3">
-      <thead >
+<div class="container">
+  <div class="">
+  <p-table [value]="receps" width="100vw" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
         <tr>
-          <th >Id</th>
-          <th >first name</th>
-          <th >last name</th>
-          <th >email</th>
-          <!-- <th scope="col">password</th> -->
+          <th pSortableColumn="_id">Id<p-sortIcon field="_id"></p-sortIcon></th>
+          <th pSortableColumn="userRef.fname">first name<p-sortIcon field="userRef.fname"></p-sortIcon></th>
+          <th pSortableColumn="userRef.lname">last name<p-sortIcon field="userRef.lname"></p-sortIcon></th>
+          <th pSortableColumn="userRef.email">email<p-sortIcon field="userRef.email"></p-sortIcon></th>
           <th >image</th>
-          <th >age</th>
-          <th >phone number</th>
-          <th >gender</th>
-          <th >user type</th>
-          <th >salary</th>
-          <th >clinic</th>
+          <th pSortableColumn="userRef.age">age<p-sortIcon field="userRef.age"></p-sortIcon></th>
+          <th pSortableColumn="userRef.phoneNumber">phone number<p-sortIcon field="userRef.phoneNumber"></p-sortIcon></th>
+          <th pSortableColumn="userRef.gender">gender<p-sortIcon field="userRef.gender"></p-sortIcon></th>
+          <th pSortableColumn="salary">salary<p-sortIcon field="salary"></p-sortIcon></th>
+          <th pSortableColumn="clinic.governorate">clinic<p-sortIcon field="clinic.governorate"></p-sortIcon></th>
           <th class="">action</th>
         </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor = "let item of receps">
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+        <tr>
           <td>{{item._id}}</td>
           <td>{{item.userRef?.fname}}</td>
           <td>{{item.userRef?.lname}}</td>
           <td>{{item.userRef?.email}}</td>
-          <!-- <td>{{item.userRef?.password}}</td> -->
-          <!-- <td>{{item.userRef?.image}}</td> -->
           <td><img src="{{this.recepService.baseUrl+item.userRef?.image}}" width="50px" height="50px"></td>
           <td>{{item.userRef?.age}}</td>
           <td>{{item.userRef?.phoneNumber}}</td>
           <td>{{item.userRef?.gender}}</td>
-          <td>{{item.userRef?.userType}}</td>
           <td>{{item.salary}}</td>
           <td>{{item.clinic?.governorate}}</td>
           <td class="btn-group">
             <button class="btn btn-primary " routerLink="/admin/details_receptionist/{{item._id}}">Details</button>
             <button class="btn btn-info" routerLink="/admin/edit_receptionist/{{item._id}}">Edit</button>
-            <button class="btn btn-danger mx-1" (click) = "deleteRecep(item._id)">Delete</button>
-
+            <button class="btn btn-danger" (click) = "deleteRecep(item._id)">Delete</button>
           </td>
-
         </tr>
-      </tbody>
-      <button class="btn btn-success mt-3" routerLink="/admin/add_receptionist">add new receptionist</button>
-    </table>
+    </ng-template>
+</p-table>
+<button class="btn btn-success mt-3 mb-3" routerLink="/admin/add_receptionist" >add new Receptionist</button>
   </div>
 </div>

@@ -1,29 +1,28 @@
-<p>doctor-list works!</p>
-<div class="container-fluid">
-  <div >
-    <table class="table mt-3">
-      <thead >
+
+<div class="container">
+  <div class="">
+  <p-table [value]="doctors" width="100vw" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
         <tr>
-          <th >Id</th>
-          <th >first name</th>
-          <th >last name</th>
-          <th >email</th>
+          <th pSortableColumn="_id">Id<p-sortIcon field="_id"></p-sortIcon></th>
+          <th pSortableColumn="userRef.fname">first name<p-sortIcon field="userRef.fname"></p-sortIcon></th>
+          <th pSortableColumn="userRef.lname">last name<p-sortIcon field="userRef.lname"></p-sortIcon></th>
+          <th pSortableColumn="userRef.email">email<p-sortIcon field="userRef.email"></p-sortIcon></th>
           <!-- <th scope="col">password</th> -->
           <th >image</th>
-          <th >age</th>
-          <th >phone number</th>
-          <th >gender</th>
-          <th >user type</th>
-          <th >vezeeta</th>
+          <th pSortableColumn="userRef.age">age<p-sortIcon field="userRef.age"></p-sortIcon></th>
+          <th pSortableColumn="userRef.phoneNumber">phone number<p-sortIcon field="userRef.phoneNumber"></p-sortIcon></th>
+          <th pSortableColumn="userRef.gender">gender<p-sortIcon field="userRef.gender"></p-sortIcon></th>
+          <!-- <th pSortableColumn="">user type<p-sortIcon field=""></p-sortIcon></th> -->
+          <th pSortableColumn="vezeeta">vezeeta<p-sortIcon field="vezeeta"></p-sortIcon></th>
           <th >ppl</th>
-          <th >specialization</th>
-
-          <th >clinic</th>
+          <th pSortableColumn="specialization">specialization<p-sortIcon field="specialization"></p-sortIcon></th>
+          <th pSortableColumn="clinic.governorate">clinic<p-sortIcon field="clinic.governorate"></p-sortIcon></th>
           <th class="">action</th>
         </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor = "let item of doctors">
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+        <tr>
           <td>{{item._id}}</td>
           <td>{{item.userRef?.fname}}</td>
           <td>{{item.userRef?.lname}}</td>
@@ -34,7 +33,7 @@
           <td>{{item.userRef?.age}}</td>
           <td>{{item.userRef?.phoneNumber}}</td>
           <td>{{item.userRef?.gender}}</td>
-          <td>{{item.userRef?.userType}}</td>
+          <!-- <td>{{item.userRef?.userType}}</td> -->
           <td>{{item.vezeeta}}</td>
           <td><img src="{{this.docService.baseUrl+item?.ppl}}" width="50px" height="50px"></td>
           <td>{{item.specialization}}</td>
@@ -42,13 +41,11 @@
           <td class="btn-group">
             <button class="btn btn-primary " routerLink="/admin/details_doctor/{{item._id}}">Details</button>
             <button class="btn btn-info" routerLink="/admin/edit_doctor/{{item._id}}">Edit</button>
-            <button class="btn btn-danger mx-1" (click) = "deleteDoc(item._id)">Delete</button>
-
+            <button class="btn btn-danger" (click) = "deleteDoc(item._id)">Delete</button>
           </td>
-
         </tr>
-      </tbody>
-      <button class="btn btn-success mt-3" routerLink="/admin/add_doctor">add new Doctor</button>
-    </table>
+    </ng-template>
+</p-table>
+<button class="btn btn-success mt-3 mb-3" routerLink="/admin/add_doctor" >add new Doctor</button>
   </div>
 </div>

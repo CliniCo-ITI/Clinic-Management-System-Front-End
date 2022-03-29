@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Clinc } from 'src/app/models/clinic';
-import { Medicin } from 'src/app/models/medicin';
+import { Clinc } from '../../../models/clinic';
+import { Medicin } from '../../../models/medicin';
 import { ClinicService } from '../../services/clinic.service';
 import { MedicinService } from '../../services/medicin.service';
 

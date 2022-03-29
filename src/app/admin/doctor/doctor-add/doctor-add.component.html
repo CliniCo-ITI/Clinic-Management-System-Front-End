@@ -1,10 +1,10 @@
-<p>doctor-add works!</p>
-<div class="container-fluid">
+<!-- <p>doctor-add works!</p> -->
+<div class="container">
   <h1>Adding Doctor Form</h1>
   <form #userForm = "ngForm"  (ngSubmit)="onSubmit()">
     <!-- {{userForm.value | json}} -->
     <hr/>
-    {{newDoc | json}}
+    <!-- {{newDoc | json}} -->
 
   <!-- File Input -->
     <div class="form-group">
@@ -25,7 +25,7 @@
     </div>
     <div class="form-group">
       <label for="exampleInputImage1" class="form-label">Profile Image:</label>
-      <input name="image" #doctorimg type="file" class="form-control" >
+      <input name="image" #doctorimg type="file" class="form-control" required>
     </div>
     <div class="form-group">
       <label for="exampleInputAge1" class="form-label">Age:</label>
@@ -49,7 +49,7 @@
     </div>
     <div class="form-group">
       <label for="exampleInputImage1" class="form-label">PPL Image:</label>
-      <input name="ppl" #ppl type="file" class="form-control" >
+      <input name="ppl" #ppl type="file" class="form-control" required>
     </div>
     <div class="form-group">
       <label for="exampleInputSpec" class="form-label">Specialization:</label>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Medicin } from 'src/app/models/medicin';
+import { Medicin } from '../../models/medicin';
 import { MedicinService } from '../services/medicin.service';
 
 @Component({

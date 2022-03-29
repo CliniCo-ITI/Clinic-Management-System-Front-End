@@ -61,7 +61,7 @@ export class ReceptionistAddComponent implements OnInit {
       formData
     ).subscribe({
       next:res=>{console.log(res);
-        this.router.navigate(['/admin/list_doctors'])},
+        this.router.navigate(['/admin/list_receptionists'])},
       error: result => {console.log("error ocurred while adding recep")}
 
     })
