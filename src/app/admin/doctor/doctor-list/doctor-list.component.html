@@ -1,3 +1,4 @@
+<p>doctor-list works!</p>
 <div class="container-fluid">
   <div >
     <table class="table mt-3">
@@ -13,36 +14,41 @@
           <th >phone number</th>
           <th >gender</th>
           <th >user type</th>
-          <th >salary</th>
+          <th >vezeeta</th>
+          <th >ppl</th>
+          <th >specialization</th>
+
           <th >clinic</th>
           <th class="">action</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor = "let item of receps">
+        <tr *ngFor = "let item of doctors">
           <td>{{item._id}}</td>
           <td>{{item.userRef?.fname}}</td>
           <td>{{item.userRef?.lname}}</td>
           <td>{{item.userRef?.email}}</td>
           <!-- <td>{{item.userRef?.password}}</td> -->
           <!-- <td>{{item.userRef?.image}}</td> -->
-          <td><img src="{{this.recepService.baseUrl+item.userRef?.image}}" width="50px" height="50px"></td>
+          <td><img src="{{this.docService.baseUrl+item.userRef?.image}}" width="50px" height="50px"></td>
           <td>{{item.userRef?.age}}</td>
           <td>{{item.userRef?.phoneNumber}}</td>
           <td>{{item.userRef?.gender}}</td>
           <td>{{item.userRef?.userType}}</td>
-          <td>{{item.salary}}</td>
+          <td>{{item.vezeeta}}</td>
+          <td><img src="{{this.docService.baseUrl+item?.ppl}}" width="50px" height="50px"></td>
+          <td>{{item.specialization}}</td>
           <td>{{item.clinic?.governorate}}</td>
           <td class="btn-group">
-            <button class="btn btn-primary " routerLink="/admin/details_receptionist/{{item._id}}">Details</button>
-            <button class="btn btn-info" routerLink="/admin/edit_receptionist/{{item._id}}">Edit</button>
-            <button class="btn btn-danger mx-1" (click) = "deleteRecep(item._id)">Delete</button>
+            <button class="btn btn-primary " routerLink="/admin/details_doctor/{{item._id}}">Details</button>
+            <button class="btn btn-info" routerLink="/admin/edit_doctor/{{item._id}}">Edit</button>
+            <button class="btn btn-danger mx-1" (click) = "deleteDoc(item._id)">Delete</button>
 
           </td>
 
         </tr>
       </tbody>
-      <button class="btn btn-success mt-3" routerLink="/admin/add_receptionist">add new receptionist</button>
+      <button class="btn btn-success mt-3" routerLink="/admin/add_doctor">add new Doctor</button>
     </table>
   </div>
 </div>

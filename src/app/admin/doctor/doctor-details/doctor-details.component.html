@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <img src="{{this.docService.baseUrl + this.retrievedDoc.userRef?.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{this.retrievedDoc.userRef?.fname}} {{this.retrievedDoc.userRef?.lname}}</h5>
+      <ul >
+        <li>vezeeta: {{retrievedDoc.vezeeta}}</li>
+        <li>age: {{retrievedDoc.userRef?.age}}</li>
+
+      </ul>
+      <div >
+        <img src="{{this.docService.baseUrl + this.retrievedDoc.ppl}}" class="card-img-bottom" alt="...">
+
+      </div>
+      <button href="#" class="btn btn-primary" routerLink="/admin/edit_doctor/{{this.retrievedDoc._id}}">Edit Doctor Profile</button>
+    </div>
+  </div>
+</div>

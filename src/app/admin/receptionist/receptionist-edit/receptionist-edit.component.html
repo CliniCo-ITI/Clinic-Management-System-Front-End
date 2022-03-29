@@ -1,1 +1,61 @@
 <p>receptionist-edit works!</p>
+    <div class="container-fluid">
+      <h1>Adding Receptionist Form</h1>
+      <!-- <form #userForm = "ngForm"  (ngSubmit)="onSubmit()"> -->
+      <form #userForm = "ngForm"  >
+
+        <!-- {{userForm.value | json}} -->
+        <hr/>
+        {{retrievedUser | json}}
+
+      <!-- File Input -->
+        <div class="form-group">
+          <label for="exampleInputFirstName1" class="form-label">First name:</label>
+          <input type="text" class="form-control" name="fname" [(ngModel)] = "retrievedUser.userRef.fname"   disabled>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputLastName1" class="form-label">Last name:</label>
+          <input type="text" class="form-control" name="lname" placeholder= "retrievedUser.userRef?.lname" [(ngModel)] = "retrievedUser.lname" disabled>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="form-label">Email:</label>
+          <input type="email" class="form-control"name="email" placeholder = "retrievedUser.userRef?.email" [(ngModel)] = "retrievedUser.email" disabled>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1" class="form-label">Password:</label>
+          <input type="password" class="form-control" name="password" placeholder = "retrievedUser.userRef?.password" [(ngModel)] = "retrievedUser.password" disabled>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputImage1" class="form-label">Profile Image:</label>
+          <input name="image" #recepimg type="file" class="form-control"   disabled>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputAge1" class="form-label">Age:</label>
+          <input type="text" class="form-control" name="age" placeholder = "retrievedUser.age" [(ngModel)] = "retrievedUser.userRef.age" disabled>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPhoneNumber1" class="form-label">Phone Number:</label>
+          <input type="text" class="form-control" name="phoneNumber" placeholder = "" [(ngModel)]= "retrievedUser.userRef.phoneNumber" >
+        </div>
+        <div class="form-group"> disabled
+          <label for="exampleInputGender1" class="form-label">Gender:</label>
+          <input name="gender"  type="text" class="form-control" [(ngModel)] = "retrievedUser.userRef.gender" disabled >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputuserType1" class="form-label">userType:</label>
+          <input name="gender"  type="text" class="form-control" [(ngModel)] = "retrievedUser.userRef.userType" disabled>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputSalary1" class="form-label">Salary:</label>
+          <input name="salary" ngModel type="text" class="form-control"placeholder="" [(ngModel)] = "retrievedUser.salary" >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputClinicid1" class="form-label">ClinicId:</label>
+          <input type="text" class="form-control" name="clinic" placeholder ="" [(ngModel)] = "retrievedUser.clinicId" >
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit" (click)="editRecep()" > UpdateRecep </button>
+        </div>
+      </form>
+    </div>
+
