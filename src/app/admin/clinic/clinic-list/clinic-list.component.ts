@@ -11,7 +11,7 @@ import { ClinicService } from '../../services/clinic.service';
 })
 export class ClinicListComponent implements OnInit {
 
-  clincics:Clinc[] | any = [];
+  clincics: any[] = [];
   constructor(public clincSer:ClinicService,public router:Router) { }
 
   add(){

@@ -1,56 +1,11 @@
-<!-- <div class="container">
-  <table *ngIf="clincics" class="table  table-hover">
-    <thead>
-      <tr>
-       <th>Governorate</th>
-       <th>Adress</th>
-       <th>StartTime</th>
-       <th>EndTime</th>
-       <th>medicin count</th>
-       <th>options</th>
 
-
-     </tr>
-    </thead>
-    <tr *ngFor="let clinic of clincics">
-      <td>{{clinic?.governorate}}</td>
-      <td>{{clinic?.address}}</td>
-      <td>{{clinic?.startTime}}</td>
-      <td>{{clinic?.endTime}}</td>
-      <td>{{clinic?. medicines.length}}</td>
-      <td>
-        <a routerLink="/admin/clinicDetails/{{ clinic._id }}" class="btn btn-info"
-          >Details</a
-        >
-        <a routerLink="/admin/edit_clinic/{{ clinic._id }}" class="btn btn-warning"
-        >Update</a
-      >
-      <a
-        routerLink="/admin/deleteClinic/{{ clinic._id }}"
-        class="btn btn-danger text-black"
-        >Delete</a
-      >
-      </td>
-    </tr>
-  </table>
-  <button class="btn btn-success" (click)="add()">add Clinc</button>
-
-</div> -->
 
 <div class="container">
 
 
   <h3 class=" text-capitalize text-secondary mb-5">our clinics</h3>
-  <p-table #clinicList [value]="clincics" [filterDelay]="0" [globalFilterFields]="['governorate','address','startTime','endTime','medicines.length']">
-    <ng-template pTemplate="caption">
-      CLINIC LIST
-      <div class="flex">
-          <span class="p-input-icon-left ml-auto">
-              <i class="pi pi-search"></i>
-              <input pInputText type="text" (input)="clinicList.filterGlobal($event.target, 'contains')" placeholder="Search keyword" />
-          </span>
-      </div>
-  </ng-template>
+  <p-table #clinicList [value]="clincics" [filterDelay]="0" [globalFilterFields]="['governorate','address','startTime','endTime','medicines.length']" dataKey="_id">
+
       <ng-template pTemplate="header">
         <tr>
           <th pSortableColumn="governorate">Governorate <p-sortIcon field="governorate"></p-sortIcon></th>
