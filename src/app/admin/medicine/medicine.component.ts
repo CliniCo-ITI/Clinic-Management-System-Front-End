@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Medicin } from 'src/app/models/medicin';
+import { MedicinService } from '../services/medicin.service';
 
 @Component({
   selector: 'app-medicine',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicineComponent implements OnInit {
 
-  constructor() { }
+  medicines:Medicin[]|any = [];
+  constructor(public medicineSer:MedicinService,public router:Router) { }
 
-  ngOnInit(): void {
+  add(){
+    this.router.navigate(['/admin/addMedicin']);
   }
 
+  ngOnInit(): void {
+    this.medicineSer.getMedicins().subscribe({
+      next:data=>{this.medicines=data,console.log(data)}
+    })
+  }
 }

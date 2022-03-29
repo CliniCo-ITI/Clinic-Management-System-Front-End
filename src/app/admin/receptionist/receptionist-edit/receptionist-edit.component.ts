@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { Receptionist } from 'src/app/models/receptionist';
-import { Clinic } from 'src/app/models/clinic';
+import { Clinc } from 'src/app/models/clinic';
 import { RecepService } from '../../services/recep.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -16,7 +16,7 @@ import { Observable } from 'rxjs';
 })
 export class ReceptionistEditComponent implements OnInit {
   public recepId:string|any = this.route.snapshot.paramMap.get('recepId');
-  retrievedUser: Receptionist|any = new Receptionist("","","","","","",0,"","","","",3000,new Clinic("","","","","",[]),new User("","","","","","",0,"","",""));
+  retrievedUser: Receptionist|any = new Receptionist("","","","","","",0,"","","","",3000,new Clinc("","","","","",[]),new User("","","","","","",0,"","",""));
   constructor(private recepSer:RecepService,private route:ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

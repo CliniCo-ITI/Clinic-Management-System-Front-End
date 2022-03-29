@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Clinic } from 'src/app/models/clinic';
+import { Clinc } from 'src/app/models/clinic';
 import { Doctor } from 'src/app/models/doctor';
 import { User } from 'src/app/models/user';
 import { DoctorService } from '../../services/doctor.service';
@@ -13,7 +13,7 @@ export class DoctorDetailsComponent implements OnInit {
   id:string = "";
   imagePath:string = "";
   pplPath:string = "";
-  public retrievedDoc =  new Doctor("","","","","","",20,"","","","",100,"","",new Clinic("","","","","",[]),new User("","","","","","",0,"","",""));
+  public retrievedDoc =  new Doctor("","","","","","",20,"","","","",100,"","",new Clinc("","","","","",[]),new User("","","","","","",0,"","",""));
 
 
   constructor(public docService:DoctorService, private route: Router,

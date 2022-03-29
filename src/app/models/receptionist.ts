@@ -1,5 +1,5 @@
 import { User } from "./user";
-import { Clinic } from "./clinic";
+import { Clinc } from "./clinic";
 
 export class Receptionist extends User {
   constructor(_id:string ,
@@ -14,7 +14,7 @@ export class Receptionist extends User {
               userType: string,
               public clinicId: string,
               public salary: number,
-              public clinic: Clinic,
+              public clinic: Clinc,
               public userRef: User,
               ){
     super(_id,fname,lname,email,password,image,age,phoneNumber,gender,userType)

@@ -1,1 +1,82 @@
-<p>medicine works!</p>
+<!-- <div class="container">
+  <table *ngIf="medicines" class="table  table-hover">
+    <thead>
+      <tr>
+       <th>Name</th>
+       <th>productionDate</th>
+       <th>expirationDate</th>
+       <th>price</th>
+       <th>description:</th>
+       <th>clinics count</th>
+       <th>options</th>
+
+
+     </tr>
+    </thead>
+    <tr *ngFor="let medicine of medicines">
+      <td>{{medicine?.name}}</td>
+      <td>{{medicine?.productionDate|date:'shortDate'}}</td>
+      <td>{{medicine?.expirationDate|date:'shortDate'}}</td>
+      <td>{{medicine?.price}}</td>
+      <td>{{medicine?.description}}</td>
+      <td>{{medicine?.clinics.length}}</td>
+      <td>
+        <a routerLink="/admin/MedicinDetails/{{medicine._id }}" class="btn btn-info"
+          >Details</a
+        >
+        <a routerLink="/admin/editeMedicine/{{medicine._id }}" class="btn btn-warning"
+        >Update</a
+      >
+      <a
+        routerLink="/admin/deleteMedicine/{{medicine._id }}"
+        class="btn btn-danger text-black"
+        >Delete</a
+      >
+    </tr>
+  </table>
+  <button class="btn btn-success" (click)="add()">add Medicine</button>
+</div> -->
+
+
+<div class="container">
+
+
+  <h3 class=" text-capitalize text-secondary mb-5 mt-5">Medicins</h3>
+  <p-table #clinicList [value]="medicines" >
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon></th>
+          <th pSortableColumn="productionDate">productionDate<p-sortIcon field="productionDate"></p-sortIcon></th>
+          <th pSortableColumn="expirationDate">expirationDate<p-sortIcon field="expirationDate"></p-sortIcon></th>
+          <th pSortableColumn="price">price<p-sortIcon field="price"></p-sortIcon></th>
+          <th pSortableColumn="description">description<p-sortIcon field="description"></p-sortIcon></th>
+          <th pSortableColumn="clinics.length">clinics count<p-sortIcon field="clinics.length"></p-sortIcon></th>
+          <th>options</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-medicine>
+        <tr>
+          <td>{{medicine?.name}}</td>
+          <td>{{medicine?.productionDate|date:'shortDate'}}</td>
+          <td>{{medicine?.expirationDate|date:'shortDate'}}</td>
+          <td>{{medicine?.price}}</td>
+          <td>{{medicine?.description}}</td>
+          <td>{{medicine?.clinics.length}}</td>
+          <td>
+            <a routerLink="/admin/MedicinDetails/{{medicine._id }}" class="btn btn-info"
+              >Details</a
+            >
+            <a routerLink="/admin/editeMedicine/{{medicine._id }}" class="btn btn-warning"
+            >Update</a
+          >
+          <a
+            routerLink="/admin/deleteMedicine/{{medicine._id }}"
+            class="btn btn-danger text-black"
+            >Delete</a
+          >
+        </tr>
+    </ng-template>
+  </p-table>
+  <button class="btn btn-success mt-5" (click)="add()">add Medicine</button>
+
+</div>

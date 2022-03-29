@@ -2,7 +2,7 @@ import { Component, OnInit, ElementRef,ViewChild,Input } from '@angular/core';
 import { DoctorService } from '../../services/doctor.service';
 import { Doctor } from '../../../models/doctor';
 import { User } from '../../../models/user';
-import { Clinic } from '../../../models/clinic';
+import { Clinc } from '../../../models/clinic';
 import { FormGroup, FormControl, FormBuilder}  from '@angular/forms';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { ClinicAddComponent } from '../../clinic/clinic-add/clinic-add.component';
@@ -19,7 +19,7 @@ export class DoctorAddComponent implements OnInit {
   @ViewChild('doctorimg',{static:false}) doctorImg:any;
   @ViewChild('ppl',{static:false}) doctorPpl:any;
 
-  public newDoc = new Doctor("","","","","","",20,"","","","",100,"","",new Clinic("","","","","",[]),new User("","","","","","",0,"","",""));
+  public newDoc = new Doctor("","","","","","",20,"","","","",100,"","",new Clinc("","","","","",[]),new User("","","","","","",0,"","",""));
 
   users = [];
   public docAdded: Doctor|any;

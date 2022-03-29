@@ -1,0 +1,26 @@
+<div *ngIf="medicin._id != ''">
+  <h3>Medicin Details</h3>
+  <table class="table table-danger">
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>productionDate</th>
+      <th>expirationDate</th>
+      <th>price</th>
+      <th>description</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ medicin._id }}</td>
+        <td>{{ medicin.name }}</td>
+        <td>{{ medicin.productionDate}}</td>
+        <td>{{medicin.expirationDate}}</td>
+        <td>{{medicin.price}}</td>
+        <td>{{medicin.description}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="delete()">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

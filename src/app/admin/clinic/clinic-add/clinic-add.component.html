@@ -1,1 +1,57 @@
-<p>clinic-add works!</p>
+<div class="container">
+<h3 class=" mt-5 mb-5">Add Clinc</h3>
+<table class="table table-success">
+  <thead>
+    <th>governorate</th>
+    <th>address</th>
+    <th>startTime</th>
+    <th>endtTime</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <input type="text" [(ngModel)]="clinc.governorate" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="clinc.address" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="clinc.startTime" />
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="clinc.endTime" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<div class="container mt-5">
+  <h3 class="mt-5">Add medicines to clinic</h3>
+  <table *ngIf="medicins" class="table table-hover">
+    <thead>
+      <tr>
+       <th>ID</th>
+       <!-- <th>Name</th> -->
+       <th>productionDate</th>
+       <th>expirationDate</th>
+       <th>price</th>
+       <th>description</th>
+       <th>Add</th>
+       <!-- <th>Medicins</th> -->
+     </tr>
+    </thead>
+    <tr *ngFor="let medicin of medicins">
+      <td>{{medicin?._id}}</td>
+      <td>{{medicin?.productionDate}}</td>
+      <td>{{medicin?.expirationDate}}</td>
+      <td>{{medicin?.price}}</td>
+      <td>{{medicin?.description}}</td>
+      <td>
+        <button class="btn btn-success text-black" (click)="add(medicin._id)">Add</button>
+    </tr>
+  </table>
+  <button class="btn btn-success" (click)="save()">Add clinic</button>
+</div>
+

@@ -16,6 +16,12 @@ import { ReceptionistDetailsComponent } from './receptionist/receptionist-detail
 
 import { MedicineComponent } from './medicine/medicine.component';
 import { ReportListComponent } from './report/report-list/report-list.component';
+import { ClinicDetailsComponent } from './clinic/clinic-details/clinic-details.component';
+import { DeleteClinicComponent } from './clinic/delete-clinic/delete-clinic.component';
+import { AddMedicinComponent } from './medicine/add-medicin/add-medicin.component';
+import { UpdateMedicinComponent } from './medicine/update-medicin/update-medicin.component';
+import { MedicineDetailsComponent } from './medicine/medicine-details/medicine-details.component';
+import { DeleteMedicinComponent } from './medicine/delete-medicin/delete-medicin.component';
 
 
 
@@ -24,17 +30,25 @@ const routes: Routes = [
   {path : 'admin/profile', component : ProfileComponent},
   {path : 'admin/add_clinic', component : ClinicAddComponent},
   {path : 'admin/list_clinic', component : ClinicListComponent},
-  {path : 'admin/edit_clinic', component : ClinicEditComponent},
   {path : 'admin/list_doctors', component : DoctorListComponent},
   {path : 'admin/details_doctor/:docId', component : DoctorDetailsComponent},
   {path : 'admin/add_doctor', component : DoctorAddComponent},
   {path : 'admin/edit_doctor/:docId', component : DoctorEditComponent},
   {path : 'admin/list_receptionists', component : ReceptionistListComponent },
   {path : 'admin/details_receptionist/:recepId', component : ReceptionistDetailsComponent},
+  {path : 'admin/edit_clinic/:id', component : ClinicEditComponent},
+  {path : 'admin/clinicDetails/:id', component : ClinicDetailsComponent},
+  {path : 'admin/deleteClinic/:id', component : DeleteClinicComponent},
+  {path : 'admin/addMedicin', component : AddMedicinComponent},
+  {path : 'admin/MedicineList', component : MedicineComponent},
+  {path : 'admin/editeMedicine/:id', component : UpdateMedicinComponent},
+  {path : 'admin/MedicinDetails/:id', component : MedicineDetailsComponent},
+  {path : 'admin/deleteMedicine/:id', component : DeleteMedicinComponent},
   {path : 'admin/add_receptionist', component : ReceptionistAddComponent },
   {path : 'admin/edit_receptionist/:recepId', component : ReceptionistEditComponent },
   {path : 'admin/medicine', component : MedicineComponent},
-  {path : 'admin/list_report', component : ReportListComponent}
+  {path : 'admin/list_report', component : ReportListComponent},
+
 ];
 
 @NgModule({

@@ -1,4 +1,6 @@
-<div class="container">
+
+<!--
+  <div class="container">
   <ul>
     <li class=" active">
       <a class="" href="" routerLink="admin">Home <span class="sr-only">(current)</span></a>
@@ -18,11 +20,21 @@
     <li class="">
       <a class="" href="" routerLink="add_receptionist">add_receptionists</a>
     </li>
-    <!-- <li class="">
+   <li class="">
       <a class="" href="" routerLink="edit_receptionist">edit_receptionists</a>
     </li> -->
-    <li class="">
+    <!-- <li class="">
       <a class="" href="" routerLink="list_receptionists">list_receptionists</a>
+      <a class="" href="" routerLink="list_clinic">cliniclist</a>
+    </li>
+    <li class="">
+      <a class="" href="" routerLink="add_clinc">addClinc</a>
+    </li>
+    <li class="">
+      <a class="" href="" routerLink="edit_clinc">editClinc</a>
+    </li>
+    <li class="">
+      <a class="" href="" routerLink="list_receptionist">list_receptionists</a>
     </li>
     <li class="">
       <a class="" href="" routerLink="medicine">medicines</a>
@@ -32,4 +44,70 @@
     </li>
   </ul>
   <router-outlet></router-outlet>
+</div>  -->
+
+
+<div class="row g-0 d-flex">
+    <div id="sideNave" class="col-md-3 col-2">
+      <div class="row g-0">
+      <ul >
+         <li class=" active">
+          <!-- <span class="fa fa-star"></span> -->
+          <a routerLink="/admin" ><span class="pi pi-palette"></span></a>
+          <a class="" href="" routerLink="/admin" class="hide">Dashboard<span class="sr-only">(current)</span>
+
+          </a>
+        </li>
+        <li class="">
+          <a routerLink="profile" ><span class="pi pi-user"></span></a>
+          <a class="" href="" class="hide">profile</a>
+        </li>
+
+
+        <li class="">
+          <a  routerLink="list_doctors"><span class="pi pi-users"></span></a>
+          <a class="" href="" routerLink="list_doctors" class="hide">list doctors</a>
+        </li>
+        <!-- <li class="">
+          <a  routerLink="add_doctor"><span class="pi pi-users"></span></a>
+          <a class="" href="" class="hide">add_doctor</a>
+        </li> -->
+        <li>
+          <a  routerLink="list_receptionists"><span class="pi pi-users"></span></a>
+          <a class="" href="" routerLink="list_receptionists" class="hide">list receptionists</a>
+        </li>
+        <!-- <li>
+          <a  routerLink="add_receptionist"><span class="pi pi-users"></span></a>
+          <a class="" href="" class="hide">add_receptionists</a>
+        </li> -->
+        <!-- <li class="">
+          <a class="" href="" routerLink="add_receptionist">add_receptionists</a>
+        </li> -->
+        <!-- <li class="">
+          <a class="" href="" routerLink="edit_receptionist">edit_receptionists</a>
+        </li> -->
+        <li class="">
+         <a routerLink="list_clinic"> <span class="fa fa-hospital-o"></span></a>
+          <a class="" href=""  routerLink="list_clinic"  class="hide">clinics</a>
+        </li>
+        <!-- <li class="">
+          <a class="" href="" routerLink="add_clinc">addClinc</a>
+        </li> -->
+        <!-- <li class="">
+          <a class="" href="" routerLink="edit_clinc">editClinc</a>
+        </li> -->
+        <li class="">
+          <a routerLink="medicine"><span class="pi pi-heart-fill"></span></a>
+          <a class="" href="" routerLink="medicine"  class="hide">medicines</a>
+        </li>
+        <!-- <li class="">
+          <a  href="" routerLink="report"><span class="pi pi-wallet"></span></a>
+          <a class="" class="hide">reports</a>
+        </li>-->
+      </ul>
+    </div>
+      <router-outlet></router-outlet>
+    </div>
+  <div class="col-md-9 col-10 uuu"></div>
 </div>
+

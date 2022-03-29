@@ -1,5 +1,5 @@
 import { User } from "./user";
-import { Clinic } from "./clinic";
+import { Clinc } from "./clinic";
 
 export class Doctor extends User {
   constructor(_id:string ,
@@ -16,7 +16,7 @@ export class Doctor extends User {
               public vezeeta: number,
               public ppl: string,
               public specialization: string,
-              public clinic: Clinic,
+              public clinic: Clinc,
               public userRef: User,
               ){
     super(_id,fname,lname,email,password,image,age,phoneNumber,gender,userType)

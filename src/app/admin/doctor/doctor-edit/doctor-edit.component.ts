@@ -1,7 +1,7 @@
 import { Component, ElementRef,ViewChild,OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { Doctor } from 'src/app/models/doctor';
-import { Clinic } from 'src/app/models/clinic';
+import { Clinc } from 'src/app/models/clinic';
 import { DoctorService } from '../../services/doctor.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -14,7 +14,7 @@ import { Observable } from 'rxjs';
 export class DoctorEditComponent implements OnInit {
 
   public doctorId:string|any = this.route.snapshot.paramMap.get('docId');
-  retrievedDoc: Doctor|any = new Doctor("","","","","","",20,"","","","",100,"","",new Clinic("","","","","",[]),new User("","","","","","",0,"","",""));
+  retrievedDoc: Doctor|any = new Doctor("","","","","","",20,"","","","",100,"","",new Clinc("","","","","",[]),new User("","","","","","",0,"","",""));
   constructor(private docSer:DoctorService,private route:ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

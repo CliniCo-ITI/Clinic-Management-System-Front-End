@@ -2,7 +2,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { RecepService } from '../../services/recep.service';
 import { Receptionist } from '../../../models/receptionist';
 import { User } from '../../../models/user'
-import { Clinic } from '../../../models/clinic';
+import { Clinc } from '../../../models/clinic';
 // import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { FormGroup, FormControl, FormBuilder}  from '@angular/forms';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
@@ -22,7 +22,7 @@ export class ReceptionistAddComponent implements OnInit {
 
   @ViewChild('recepimg',{static:false}) recepImg:any;
   // newRecep:Receptionist |any;
-  newRecep = new Receptionist("","","","","","",0,"","","","",3000,new Clinic("","","","","",[]),new User("","","","","","",0,"","",""));
+  newRecep = new Receptionist("","","","","","",0,"","","","",3000,new Clinc("","","","","",[]),new User("","","","","","",0,"","",""));
   // preview: string|any;
   //
   // percentDone: any = 0;

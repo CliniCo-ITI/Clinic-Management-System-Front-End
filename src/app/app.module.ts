@@ -10,8 +10,9 @@ import { CoreModule } from './core/core.module';
 import { AdminModule } from './admin/admin.module';
 import { HttpClientModule} from '@angular/common/http';
 import { RecepService } from './admin/services/recep.service';
-
-
+import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
+import * as i3 from "@angular/cdk/scrolling";
+import {TableModule} from 'primeng/table'
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { RecepService } from './admin/services/recep.service';
   ],
   providers: [
     RecepService,
+    TableModule,
   ],
   bootstrap: [AppComponent]
 })
