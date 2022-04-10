@@ -19,7 +19,6 @@ export class InvoiceEditComponent implements OnInit {
     ) { }
 
   invoiceID = (this.route.snapshot.paramMap.get('id'));
-  
   // invoiceID = this.route.params.subscribe(a=>{
   //   this.invoice._id=a['_id'];
   // })
@@ -27,10 +26,7 @@ export class InvoiceEditComponent implements OnInit {
   invs:Invoice [] = [];
 
   public iid:string = "";
- 
 
-  
-  
 
 
   edit() {
@@ -62,7 +58,7 @@ export class InvoiceEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    console.log(this.invoiceID);
     if(this.invoiceID != ""){
       this.invServ.getInvoiceByID(this.invoiceID!).subscribe({
         next: (res) =>{
@@ -77,8 +73,6 @@ export class InvoiceEditComponent implements OnInit {
         }
       })
     }
-
-
 
     // this.ar.params.subscribe(a => {
     //   //  this.invoice._id=a['_id']
@@ -95,3 +89,6 @@ export class InvoiceEditComponent implements OnInit {
   }
 
 }
+
+
+

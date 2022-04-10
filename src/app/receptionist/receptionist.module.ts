@@ -8,6 +8,7 @@ import { InvoiceModule } from '../invoice/invoice.module';
 import { InvoiceListComponent } from '../invoice/invoice-list/invoice-list.component';
 import { InvoiceAddComponent } from '../invoice/invoice-add/invoice-add.component';
 import { InvoiceEditComponent } from '../invoice/invoice-edit/invoice-edit.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 
@@ -23,7 +24,8 @@ const routes:Routes=[
   declarations: [
     ProfileComponent,
     DoctorAppointmentComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,

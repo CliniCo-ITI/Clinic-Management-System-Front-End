@@ -1,11 +1,8 @@
+<div class="container-fluid mt-3" id="list-invoice">
 
 
-<div class="container-fluid" id="list-invoice">
-
-
-<div class="wrapper">
   <!-- Sidebar  -->
-  <nav id="sidebar">
+  <!-- <nav id="sidebar">
       <div class="sidebar-header">
           <h3>Clinic Management system</h3>
       </div>
@@ -33,47 +30,47 @@
           </li>
 
       </ul>
-  </nav>
+  </nav> -->
+  <div class="col-md-4 col-sm-12">
+    <app-sidebar></app-sidebar>
+  </div>
 
 
-</div>
+  <!-- ===================== -->
+  <div class="container col-md-6 col-sm-12">
+    
+  <!-- ================== -->
 
-<!-- ===================== -->
-<div class="container" >
-    <div class="row mb-3">
-      <!-- <label  class="col-sm-2 col-form-label">Id</label> -->
-     
-      <!-- <div class="col-sm-4">
-        <input  type="text" class="form-control"   [(ngModel)]="invoice._id">
-      </div> -->
-      <label for="inputPayment" class="col-sm-2 col-form-label">Payment</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="inputPayment" [(ngModel)]="invoice.paymentMethod">
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label for="inputTotalAmount" class="col-sm-2 col-form-label">Total Amount</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="inputTotalAmount" [(ngModel)]="invoice.totalAmount">
-      </div>
-    </div>
-
-    <div class="row mb-3">
-        <label for="inputTotalPaid" class="col-sm-2 col-form-label">Total Paid</label>
-        <div class="col-sm-4">
-          <input type="text" class="form-control" id="inputTotal"  [(ngModel)]="invoice.totalPaid">
+  <div class="right ">
+    <div class="card">
+      <div class="card-header">Edit Invoice</div>
+      <div class="card-body">
+        
+        <div class="row g-3 my-2">
+          <div class="col-md-8">
+            <label for="inputFirst" class="form-label">Payment</label>
+            <input type="text" class="form-control" aria-label="Last name" id="inputFirst" name="firstname"
+              [(ngModel)]="invoice.paymentMethod" />
+          </div>
+          <div class="col-md-8">
+            <label for="inputLast" class="form-label">Total Amount</label>
+            <input type="text" class="form-control" aria-label="Last name" id="inputLast" name="lastname"
+              [(ngModel)]="invoice.totalAmount" />
+          </div>
+          <div class="col-md-8">
+            <label for="inputEmail" class="form-label">Total Paid</label>
+            <input type="email" class="form-control" id="inputEmail" [(ngModel)]="invoice.totalPaid" />
+          </div>
+          <div class="col-md-8">
+            <label for="inputLast" class="form-label">Amount Left</label>
+            <input type="text" class="form-control" aria-label="Last name" id="inputLast" name="lastname" [(ngModel)]="invoice.amountLeft" />
+          </div>
+         
         </div>
       </div>
-
-      <div class="row mb-3">
-        <label for="inputAmountLeft" class="col-sm-2 col-form-label">Amount Left</label>
-        <div class="col-sm-4">
-          <input type="text" class="form-control" id="inputAmountLeft"  [(ngModel)]="invoice.amountLeft">
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary" (click)="edit()" id="btnEdit">Update</button>
     </div>
-    
-    
 
+  </div>
+  </div>
 </div>
+

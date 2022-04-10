@@ -6,18 +6,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { CoreModule } from './core/core.module';
-import { InvoiceModule } from './invoice/invoice.module';
-import { RouterModule,Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminModule } from './admin/admin.module';
+import { RouterModule, Routes } from '@angular/router';
 import { ReceptionistModule } from './receptionist/receptionist.module';
 import { ProfileComponent } from './receptionist/profile/profile.component';
-import { AdminModule } from './admin/admin.module';
-
-const routes:Routes=[
-  
-  {path:"profileReceptionst",component:ProfileComponent}
+const routes: Routes = [
+  { path: "receptionst", component: ProfileComponent }
 ]
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +26,8 @@ const routes:Routes=[
     AppRoutingModule,
     CoreModule,
     AdminModule,
+    ReceptionistModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

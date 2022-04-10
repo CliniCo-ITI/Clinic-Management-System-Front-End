@@ -9,11 +9,13 @@ import { Appointment } from './_models/appointment';
 export class ReceptionistService {
 
 
-  private baseURL: string = "http://localhost:8080/reciptionist/appointments";
+  private baseURL: string = "http://localhost:8080/admin/clinics";
 
   constructor(public http:HttpClient) { }
 
   getAppointmentDoctor(id:string){
+  
+
     return this.http.get<Appointment>(`${this.baseURL}/${id}`)
   }
 

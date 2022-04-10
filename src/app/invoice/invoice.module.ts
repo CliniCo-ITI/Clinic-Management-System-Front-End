@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterModule,Routes } from '@angular/router';
 import { InvoiceAddComponent } from './invoice-add/invoice-add.component';
 import { InvoiceEditComponent } from './invoice-edit/invoice-edit.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
  const routes:Routes =[
   {path:"invoiceList",component:InvoiceListComponent},
@@ -18,7 +19,8 @@ import { InvoiceEditComponent } from './invoice-edit/invoice-edit.component';
   declarations: [
     InvoiceListComponent,
     InvoiceAddComponent,
-    InvoiceEditComponent
+    InvoiceEditComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,FormsModule,RouterModule,RouterModule.forRoot(routes)

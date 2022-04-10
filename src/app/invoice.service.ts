@@ -20,7 +20,7 @@ export class InvoiceService {
   getInvoices() {
     return this.http.get<Invoice[]>(this.baseURL);
   }
-
+  
   addInvoice(inv: Invoice) {
     return this.http.post<Invoice>(this.baseURL, inv);
   }
@@ -39,7 +39,3 @@ export class InvoiceService {
 
 
 }
-
-
-
-

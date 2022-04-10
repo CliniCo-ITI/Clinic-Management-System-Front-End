@@ -1,45 +1,15 @@
 
 
-<div class="container-fluid" id="list-invoice">
-
-<div class="wrapper">
-    <!-- Sidebar  -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>Clinic Management system</h3>
-        </div>
-
-        <ul class="list-unstyled components">
-            <p>List Invoices</p>
-            <li>
-                <a [routerLink]="['/profile']" data-toggle="collapse">Profile</a>
-
-            </li>
-
-            <li class="nav-item dropdown" ngbDropdown>
-                <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false" ngbDropdownToggle>
-                    Invoice
-                </a>
-                <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarScrollingDropdown">
-                    <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/list']">List</a></li>
-                    <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/add']">Add</a></li>
-                    <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/edit']">Edit</a></li>
-                </ul>
-            </li>
-            <li>
-                <a [routerLink]="['/doctorAppointment']" data-toggle="collapse">Doctors Appointment</a>
-            </li>
-
-        </ul>
-    </nav>
+<div class="container-fluid mt-3" id="list-invoice">
 
 
-</div>
+   
+
+    <div class="col-md-4 col-sm-12">
+        <app-sidebar></app-sidebar>
+      </div>
 
 
-
-<!-- ===================================================================== -->
     
     
 
