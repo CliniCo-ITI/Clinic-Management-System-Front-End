@@ -1,4 +1,4 @@
-<p>receptionist-edit works!</p>
+
     <div class="container-fluid">
       <h1>Adding Receptionist Form</h1>
       <!-- <form #userForm = "ngForm"  (ngSubmit)="onSubmit()"> -->
@@ -15,15 +15,15 @@
         </div>
         <div class="form-group">
           <label for="exampleInputLastName1" class="form-label">Last name:</label>
-          <input type="text" class="form-control" name="lname" placeholder= "retrievedUser.userRef?.lname" [(ngModel)] = "retrievedUser.lname" disabled>
+          <input type="text" class="form-control" name="lname" placeholder= "retrievedUser.userRef.lname" [(ngModel)] = "retrievedUser.userRef.lname" disabled>
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1" class="form-label">Email:</label>
-          <input type="email" class="form-control"name="email" placeholder = "retrievedUser.userRef?.email" [(ngModel)] = "retrievedUser.email" disabled>
+          <input type="email" class="form-control"name="email" placeholder = "retrievedUser.userRef.email" [(ngModel)] = "retrievedUser.userRef.email" disabled>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1" class="form-label">Password:</label>
-          <input type="password" class="form-control" name="password" placeholder = "retrievedUser.userRef?.password" [(ngModel)] = "retrievedUser.password" disabled>
+          <input type="password" class="form-control" name="password" placeholder = "retrievedUser.userRef.password" [(ngModel)] = "retrievedUser.userRef.password" disabled>
         </div>
         <div class="form-group">
           <label for="exampleInputImage1" class="form-label">Profile Image:</label>
@@ -37,7 +37,7 @@
           <label for="exampleInputPhoneNumber1" class="form-label">Phone Number:</label>
           <input type="text" class="form-control" name="phoneNumber" placeholder = "" [(ngModel)]= "retrievedUser.userRef.phoneNumber" >
         </div>
-        <div class="form-group"> disabled
+        <div class="form-group">
           <label for="exampleInputGender1" class="form-label">Gender:</label>
           <input name="gender"  type="text" class="form-control" [(ngModel)] = "retrievedUser.userRef.gender" disabled >
         </div>

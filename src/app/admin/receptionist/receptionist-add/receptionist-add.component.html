@@ -8,47 +8,48 @@
   <!-- File Input -->
     <div class="form-group">
       <label for="exampleInputFirstName1" class="form-label">First name:</label>
-      <input type="text" class="form-control" name="fname" [(ngModel)] = "newRecep.fname">
+      <input type="text" class="form-control" name="fname" placeholder="as: Ahmed" [(ngModel)] = "newRecep.fname" required>
     </div>
     <div class="form-group">
       <label for="exampleInputLastName1" class="form-label">Last name:</label>
-      <input type="text" class="form-control" name="lname" [(ngModel)] = "newRecep.lname">
+      <input type="text" class="form-control" name="lname" placeholder="as: Mohammed" [(ngModel)] = "newRecep.lname"  required>
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1" class="form-label">Email:</label>
-      <input type="email" class="form-control"name="email" [(ngModel)] = "newRecep.email">
+      <input type="email" class="form-control"name="email" placeholder="as: recep@recep.com" [(ngModel)] = "newRecep.email" required>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1" class="form-label">Password:</label>
-      <input type="password" class="form-control" name="password" [(ngModel)] = "newRecep.password">
+      <input type="password" class="form-control" name="password" placeholder="must contain letters and numbers/greater than 4 chars" [(ngModel)] = "newRecep.password" required>
     </div>
     <div class="form-group">
       <label for="exampleInputImage1" class="form-label">Profile Image:</label>
-      <input name="image" #recepimg type="file" class="form-control" >
+      <span style="display:inline-block; padding: 5;margin-left:5;">      (only: *.jpg, *.jpeg, *.png)</span>
+      <input name="image" #recepimg type="file" placeholder="only: *.jpg, *.jpeg, *.png" class="form-control"  required>
     </div>
     <div class="form-group">
       <label for="exampleInputAge1" class="form-label">Age:</label>
-      <input type="text" class="form-control" name="age" [(ngModel)] = "newRecep.age">
+      <input type="text" class="form-control" name="age" placeholder="as: 25 etc." [(ngModel)] = "newRecep.age" required>
     </div>
     <div class="form-group">
       <label for="exampleInputPhoneNumber1" class="form-label">Phone Number:</label>
-      <input type="text" class="form-control" name="phoneNumber" [(ngModel)] = "newRecep.phoneNumber">
+      <input type="text" class="form-control" name="phoneNumber" placeholder="as: 010303399902" [(ngModel)] = "newRecep.phoneNumber" required>
     </div>
     <div class="form-group">
       <label for="exampleInputGender1" class="form-label">Gender:</label>
-      <input name="gender"  type="text" class="form-control" [(ngModel)] = "newRecep.gender" >
+      <input name="gender"  type="text" class="form-control" placeholder="only in: F or M" [(ngModel)] = "newRecep.gender"  required>
     </div>
     <div class="form-group">
       <label for="exampleInputuserType1" class="form-label">userType:</label>
-      <input name="gender"  type="text" class="form-control" [(ngModel)] = "newRecep.userType">
+      <input name="gender"  type="text" class="form-control" placeholder="only: receptionist" [(ngModel)] = "newRecep.userType" required>
     </div>
     <div class="form-group">
       <label for="exampleInputSalary1" class="form-label">Salary:</label>
-      <input name="salary" ngModel type="text" class="form-control" [(ngModel)] = "newRecep.salary">
+      <input name="salary" ngModel type="text" class="form-control" placeholder="as: 3000" [(ngModel)] = "newRecep.salary" required>
     </div>
     <div class="form-group">
       <label for="exampleInputClinicid1" class="form-label">ClinicId:</label>
-      <input type="text" class="form-control" name="clinic" [(ngModel)] = "newRecep.clinicId">
+      <input type="text" class="form-control" name="clinic" placeholder="as: 623e0df6a6a27481c540d337" [(ngModel)] = "newRecep.clinicId" required>
     </div>
     <div class="form-group">
       <button class="btn btn-primary" type="submit" > Submit </button>
