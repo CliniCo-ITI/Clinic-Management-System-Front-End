@@ -43,6 +43,7 @@
        <!-- <th>Medicins</th> -->
      </tr>
     </thead>
+    <tbody>
     <tr *ngFor="let clinic of clinics">
       <td>{{clinic?._id}}</td>
       <td>{{clinic?.governorate}}</td>
@@ -52,6 +53,7 @@
       <td>
         <button class="btn btn-success text-black" (click)="add(clinic._id)">Add</button>
     </tr>
+  </tbody>
   </table>
   <button class="btn btn-success" (click)="save()">Add Medicine</button>
 </div>

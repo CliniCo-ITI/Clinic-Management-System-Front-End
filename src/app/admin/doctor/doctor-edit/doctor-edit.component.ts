@@ -3,6 +3,7 @@ import { User } from '../../../models/user';
 import { Doctor } from '../../../models/doctor';
 import { Clinc } from '../../../models/clinic';
 import { DoctorService } from '../../services/doctor.service';
+import { ClinicService } from '../../services/clinic.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { Observable } from 'rxjs';
@@ -14,12 +15,16 @@ import { Observable } from 'rxjs';
 export class DoctorEditComponent implements OnInit {
 
   public doctorId:string|any = this.route.snapshot.paramMap.get('docId');
+  public clinics:Clinc[]|any;
   retrievedDoc: Doctor|any = new Doctor("","","","","","",20,"","","","",100,"","",new Clinc("","","","","",[]),new User("","","","","","",0,"","",""));
-  constructor(private docSer:DoctorService,private route:ActivatedRoute, private router: Router) { }
+  constructor(private docSer:DoctorService,private route:ActivatedRoute,private clinicSer:ClinicService, private router: Router) { }
 
   ngOnInit(): void {
     this.docSer.getDocById(this.doctorId).subscribe({
       next: data => this.retrievedDoc = data
+    })
+    this.clinicSer.getCliincs().subscribe({
+      next: data=>{this.clinics = data;console.log(this.clinics)}
     })
   }
 

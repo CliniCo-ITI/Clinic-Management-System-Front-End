@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef,ViewChild,Input } from '@angular/core';
 import { DoctorService } from '../../services/doctor.service';
+import { ClinicService } from '../../services/clinic.service';
 import { Doctor } from '../../../models/doctor';
 import { User } from '../../../models/user';
 import { Clinc } from '../../../models/clinic';
@@ -23,9 +24,13 @@ export class DoctorAddComponent implements OnInit {
 
   users = [];
   public docAdded: Doctor|any;
-  constructor(private docSer:DoctorService,private router: Router) { }
+  public clinics:Clinc[]|any;
+  constructor(private docSer:DoctorService,private clinicSer:ClinicService,private router: Router) { }
 
   ngOnInit(): void {
+    this.clinicSer.getCliincs().subscribe({
+      next:data =>{this.clinics = data; console.log(this.clinics) }
+    })
   }
 
   onSubmit(){
@@ -47,6 +52,7 @@ export class DoctorAddComponent implements OnInit {
     formData.append('phoneNumber', this.newDoc.phoneNumber);
     formData.append('gender', this.newDoc.gender);
     formData.append('userType',this.newDoc.userType);
+
     formData.append('vezeeta',this.newDoc.vezeeta);
     formData.append('specialization',this.newDoc.specialization);
     formData.append('clinic',this.newDoc.clinicId);

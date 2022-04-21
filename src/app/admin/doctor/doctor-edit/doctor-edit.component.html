@@ -4,7 +4,7 @@
   <form #userForm = "ngForm">
     <!-- {{userForm.value | json}} -->
     <hr/>
-    {{retrievedDoc | json}}
+    <!-- {{retrievedDoc | json}} -->
 
   <!-- File Input -->
     <div class="form-group">
@@ -55,9 +55,15 @@
       <label for="exampleInputSpec" class="form-label">Specialization:</label>
       <input name="specialization" ngModel type="text" class="form-control" [(ngModel)] = "retrievedDoc.specialization">
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="exampleInputClinicid1" class="form-label">ClinicId:</label>
       <input type="text" class="form-control" name="clinicid" [(ngModel)] = "retrievedDoc.clinic">
+    </div> -->
+    <div class="form-group">
+      <label for="exampleInputClinicid1" class="form-label">Clinic</label>
+      <select name="clinic"  class="form-control" [(ngModel)] = "retrievedDoc.clinicId" >
+        <option *ngFor="let clinic of clinics" [value]="clinic._id" >{{clinic.governorate}}</option>
+      </select>
     </div>
     <div class="form-group">
       <button class="btn btn-primary" type="submit" (click)="editDoctor()"> Submit </button>

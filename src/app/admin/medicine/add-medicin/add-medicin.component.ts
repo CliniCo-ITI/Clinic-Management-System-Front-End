@@ -14,7 +14,7 @@ export class AddMedicinComponent implements OnInit {
 
   clinicRef:string[] = [];
   clinics:Clinc[]|any = [];
-  medicine: Medicin = new Medicin("","",new Date,new Date,0,"",this.clinicRef);
+  medicine: Medicin = new Medicin("","",new Date(),new Date(),0,"",this.clinicRef);
   constructor(
     public clincSer:ClinicService,
     public router:Router,
@@ -26,7 +26,7 @@ export class AddMedicinComponent implements OnInit {
       error: (err) => console.log(err),
       complete: () => console.log('added'),
     });
-    this.router.navigate(['admin/MedicineList']);
+    this.router.navigate(['/admin/MedicineList']);
   }
   ngOnInit(): void {
     this.getAllClinics();

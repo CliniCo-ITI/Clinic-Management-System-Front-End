@@ -77,7 +77,7 @@ export class UpdateMedicinComponent implements OnInit {
               console.log('update one');
             },
           });
-        this.router.navigate(['admin/list_clinic']);
+        this.router.navigate(['/admin/list_clinic']);
         // console.log(this.updateClinic)
       })
   }

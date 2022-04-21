@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { RecepService } from '../../services/recep.service';
+import { ClinicService } from '../../services/clinic.service';
 import { Receptionist } from '../../../models/receptionist';
 import { User } from '../../../models/user'
 import { Clinc } from '../../../models/clinic';
@@ -27,12 +28,17 @@ export class ReceptionistAddComponent implements OnInit {
   //
   // percentDone: any = 0;
   users = [];
+  clinics:Clinc[]|any = [];
   public recepAdded: Receptionist|any;
 
-  constructor(private recepSer:RecepService,private router:Router) {
+  constructor(private recepSer:RecepService,private clinicSer:ClinicService,private router:Router) {
 
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.clinicSer.getCliincs().subscribe({
+      next: data =>{this.clinics = data;console.log(this.clinics)}
+    })
+  }
 
 
   onFileChange(event:any){
