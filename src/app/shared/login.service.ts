@@ -20,7 +20,8 @@ export class LoginService {
           this.router.navigate(['/admin']);
         }
 
-     }
+     },
+     (err) => console.log(err)
 
   );
   }
