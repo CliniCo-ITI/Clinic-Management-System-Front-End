@@ -12,13 +12,15 @@ import { HttpClientModule} from '@angular/common/http';
 import { RecepService } from './admin/services/recep.service';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import * as i3 from "@angular/cdk/scrolling";
-import {TableModule} from 'primeng/table'
+import {TableModule} from 'primeng/table';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+
   ],
   imports: [
     BrowserModule,
