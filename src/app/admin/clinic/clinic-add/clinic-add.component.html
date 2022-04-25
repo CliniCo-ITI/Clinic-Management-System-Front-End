@@ -1,30 +1,25 @@
-<div class="container">
-<h3 class=" mt-5 mb-5">Add Clinc</h3>
-<table class="table table-success">
-  <thead>
-    <th>governorate</th>
-    <th>address</th>
-    <th>startTime</th>
-    <th>endtTime</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <input type="text" [(ngModel)]="clinc.governorate" />
-      </td>
-      <td>
-        <input type="text" [(ngModel)]="clinc.address" />
-      </td>
-      <td>
-        <input type="text" [(ngModel)]="clinc.startTime" />
-      </td>
-      <td>
-        <input type="text" [(ngModel)]="clinc.endTime" />
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="row g-0">
+  <div id="sideNave" class="col-md-3 col-2">
+    <app-side-bar></app-side-bar>
 </div>
+<div class="col-md-9 col-10 clinic" >
+<h3 class=" mt-5 mb-5">Add Clinc</h3>
+
+
+
+        <label for="governorate" class="form-label">Governorate</label>
+        <input id="governorate" class="form-control" type="text" [(ngModel)]="clinc.governorate" />
+
+        <label for="address" class="form-label">Address</label>
+        <input id="address" class="form-control" type="text" [(ngModel)]="clinc.address" />
+
+        <label for="startTime" class="form-label">StartTime</label>
+        <input id="startTime" class="form-control" [(ngModel)]="clinc.startTime" />
+
+        <label for="endTime" class="form-label">EndTime</label>
+        <input id="endTime" class="form-control" [(ngModel)]="clinc.endTime" />
+
+
 
 
 <div class="container mt-5">
@@ -33,13 +28,13 @@
     <thead>
       <tr>
        <th>ID</th>
-       <!-- <th>Name</th> -->
+
        <th>productionDate</th>
        <th>expirationDate</th>
        <th>price</th>
        <th>description</th>
        <th>Add</th>
-       <!-- <th>Medicins</th> -->
+
      </tr>
     </thead>
     <tr *ngFor="let medicin of medicins">
@@ -54,4 +49,10 @@
   </table>
   <button class="btn btn-success" (click)="save()">Add clinic</button>
 </div>
+</div>
+</div>
+
+
+
+
 

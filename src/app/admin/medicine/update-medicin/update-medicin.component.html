@@ -1,35 +1,25 @@
-<div *ngIf="medicinId != ''">
-  <h3>Update Clinic</h3>
-  <table class="table table-info">
-    <thead>
-      <th>Name</th>
-      <th>productionDate</th>
-      <th>expirationDate</th>
-      <th>price</th>
-      <th>description</th>
-      <th>operations</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <input type="text" [(ngModel)]="updatMedicin.name"/>
-        </td>
-        <td>
-          <input type="date" [(ngModel)]="updatMedicin.productionDate" />
-        </td>
-        <td>
-          <input type="date" [(ngModel)]="updatMedicin.expirationDate" />
-        </td>
-        <td>
-          <input type="number" [(ngModel)]="updatMedicin.price" />
-        </td>
-        <td>
-          <input type="text" [(ngModel)]="updatMedicin.description" />
-        </td>
-        <td>
-          <button class="btn btn-info" (click)="update()">Update</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="row g-0">
+  <div id="sideNave" class="col-md-3 col-2">
+<app-side-bar></app-side-bar>
+</div>
+<div class="col-md-9 col-10 medicin" >
+
+<h3 class="mt-5">Update Medicin</h3>
+<label for="Name" class="form-label">Name</label>
+<input id="Name" class="form-control" [(ngModel)]="updatMedicin.name" />
+
+<label for="productionDate" class="form-label" >ProductionDate</label>
+<input id="productionDate" class="form-control" type="date" [(ngModel)]="updatMedicin.productionDate"/>
+
+<label for="expirationDate" class="form-label">ExpirationDate</label>
+<input id="expirationDate" class="form-control" type="date" [(ngModel)]="updatMedicin.expirationDate" />
+
+<label for="price" class="form-label">Price</label>
+<input id="price" class="form-control" [(ngModel)]="updatMedicin.price" />
+
+<label for="description" class="form-label">Description</label>
+<input id="description" class="form-control" [(ngModel)]="updatMedicin.description" />
+<button class="btn btn-info mt-3" (click)="update()">Update</button>
+
+</div>
 </div>

@@ -1,9 +1,12 @@
 
 
-<div class="container">
+<div class="row g-0">
+  <div id="sideNave" class="col-md-3 col-2">
+<app-side-bar></app-side-bar>
+</div>
 
-
-  <h3 class=" text-capitalize text-secondary mb-5">our clinics</h3>
+<div class="col-md-9 col-10 clinic" >
+  <h3 class=" text-capitalize text-secondary mb-5 mt-5">our clinics</h3>
   <p-table #clinicList [value]="clincics" [filterDelay]="0" [globalFilterFields]="['governorate','address','startTime','endTime','medicines.length']" dataKey="_id">
 
       <ng-template pTemplate="header">
@@ -40,6 +43,7 @@
     </ng-template>
   </p-table>
   <button class="btn btn-success mt-5" (click)="add()">add Clinc</button>
-
 </div>
+</div>
+
 
