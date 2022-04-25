@@ -14,6 +14,8 @@ import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import * as i3 from "@angular/cdk/scrolling";
 import {TableModule} from 'primeng/table';
 
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component'
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import {TableModule} from 'primeng/table';
     HomeComponent,
     ErrorComponent,
 
+    LoginComponent,
+      RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,7 @@ import {TableModule} from 'primeng/table';
     AdminModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     RecepService,

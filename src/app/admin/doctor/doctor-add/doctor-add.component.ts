@@ -51,7 +51,7 @@ export class DoctorAddComponent implements OnInit {
     formData.append('age', this.newDoc.age);
     formData.append('phoneNumber', this.newDoc.phoneNumber);
     formData.append('gender', this.newDoc.gender);
-    formData.append('userType',this.newDoc.userType);
+    formData.append('userType',"doctor");
 
     formData.append('vezeeta',this.newDoc.vezeeta);
     formData.append('specialization',this.newDoc.specialization);

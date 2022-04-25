@@ -5,36 +5,57 @@ import { Doctor } from '../../models/doctor';
 import { DoctorAddComponent } from "../doctor/doctor-add/doctor-add.component";
 // import { FormGroup,FormBuilder } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
+import { UserService } from 'app/shared/user.service';
 @Injectable({
   providedIn: 'root'
 })
 export class DoctorService {
 
   public baseUrl = "http://localhost:8080/";
-  constructor( public http: HttpClient) { }
-  private httpOptions = {
-    headers: new HttpHeaders({
-      // 'content-Type': 'application/json',
-      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2I5NGRjOTM4YWEwNDFmNjdjZmQ1YiIsImZuYW1lIjoiTmFkYSIsImxuYW1lIjoiTWFtZG91aCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOiJhZG1pbiIsImlhdCI6MTY0ODEzMTI1OH0.87RiBuPxEi0secbsFgh3JYK_o_NwOK6bk6g0agG2LDI'
-    }),
+  constructor( public http: HttpClient,public userLoginSer:UserService) { }
+  // private httpOptions = {
+  //   headers: new HttpHeaders({
+  //     // 'content-Type': 'application/json',
+  //     'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2I5NGRjOTM4YWEwNDFmNjdjZmQ1YiIsImZuYW1lIjoiTmFkYSIsImxuYW1lIjoiTWFtZG91aCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOiJhZG1pbiIsImlhdCI6MTY0ODEzMTI1OH0.87RiBuPxEi0secbsFgh3JYK_o_NwOK6bk6g0agG2LDI'
+  //   }),
 
-  }
+  // }
 
   getAllDoctors(){
-    return this.http.get<Doctor[]>(this.baseUrl+"admin/doctor/",this.httpOptions)
+    return this.http.get<Doctor[]>(this.baseUrl+"admin/doctor/",{
+      headers:{
+       authorization: this.userLoginSer.getUserToken(),
+      }
+    })
   }
   addDoctor(newDoctor:any) {
 
     // formData.append('clinic',newRecep.clinic);
-    return this.http.post(`${this.baseUrl}admin/doctor`, newDoctor,this.httpOptions);
+    return this.http.post(`${this.baseUrl}admin/doctor`, newDoctor,{
+      headers:{
+       authorization: this.userLoginSer.getUserToken(),
+      }
+    });
   }
   getDocById(id: string):Observable<any> {
-    return this.http.get(`${this.baseUrl}admin/doctor/${id}`,this.httpOptions);
+    return this.http.get(`${this.baseUrl}admin/doctor/${id}`,{
+      headers:{
+       authorization: this.userLoginSer.getUserToken(),
+      }
+    });
   }
   updateDoctor(doctorid:string,doctorTobeEdited:any){
-    return this.http.put(`${this.baseUrl}admin/doctor/${doctorid}`,doctorTobeEdited, this.httpOptions);
+    return this.http.put(`${this.baseUrl}admin/doctor/${doctorid}`,doctorTobeEdited,{
+      headers:{
+       authorization: this.userLoginSer.getUserToken(),
+      }
+    });
   }
   deleteDoctor(id: string): Observable<any> {
-      return this.http.delete(`${this.baseUrl}admin/doctor/${id}`,this.httpOptions);
+      return this.http.delete(`${this.baseUrl}admin/doctor/${id}`,{
+        headers:{
+         authorization: this.userLoginSer.getUserToken(),
+        }
+      });
   }
 }

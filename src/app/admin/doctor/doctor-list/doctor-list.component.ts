@@ -19,7 +19,8 @@ export class DoctorListComponent implements OnInit {
   }
   deleteDoc(_id:string){
     this.docService.deleteDoctor(_id).subscribe({
-      next:response => {console.log(response);}
+      next:response => {console.log(response);
+      }
     })
   }
 }
