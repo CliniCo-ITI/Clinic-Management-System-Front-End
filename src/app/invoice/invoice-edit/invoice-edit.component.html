@@ -1,0 +1,49 @@
+<div class="container-fluid mt-3" id="list-invoice">
+
+
+    
+    <div class="col-md-4 col-sm-12">
+      <app-sidebar></app-sidebar>
+    </div>
+  
+  
+    <!-- ===================== -->
+    <div class="container col-md-6 col-sm-12">
+      
+    <!-- ================== -->
+  
+    <div class="right ">
+      <div class="card">
+        <div class="card-header">Edit Invoice</div>
+        <div class="card-body">
+          
+          <div class="row g-3 my-2">
+            <div class="col-md-8">
+              <label for="inputFirst" class="form-label">Payment</label>
+              <input type="text" class="form-control" aria-label="Last name" id="inputFirst" name="firstname"
+                [(ngModel)]="invoice.paymentMethod" />
+            </div>
+            <div class="col-md-8">
+              <label for="inputLast" class="form-label">Total Amount</label>
+              <input type="text" class="form-control" aria-label="Last name" id="inputLast" name="lastname"
+                [(ngModel)]="invoice.totalAmount" />
+            </div>
+            <div class="col-md-8">
+              <label for="inputEmail" class="form-label">Total Paid</label>
+              <input type="email" class="form-control" id="inputEmail" [(ngModel)]="invoice.totalPaid" />
+            </div>
+            <div class="col-md-8">
+              <label for="inputLast" class="form-label">Amount Left</label>
+              <input type="text" class="form-control" aria-label="Last name" id="inputLast" name="lastname" [(ngModel)]="invoice.amountLeft" />
+            </div>
+           
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="edit()" id="btnAdd">Update</button>
+    </div>
+  </div>
+  
+  

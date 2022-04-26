@@ -1,0 +1,114 @@
+<!-- <p>profile works!</p>
+
+<app-sidebar></app-sidebar> -->
+
+<div class="container-fluid mt-3 gap-5" id="content">
+
+    
+    <div class="col-md-4 col-sm-12">
+        <app-sidebar></app-sidebar>
+      </div>
+
+<div class="right">
+    <div class="card">
+        <div class="card-header">Profile Setting</div>
+        <div class="card-body">
+          <div class="row g-0">
+            <div class="col-md-6 col-12 offset-md-5">
+              <img
+                src="assets/imgs/Clinico.png"
+                class="profile-pricture"
+                width="150"
+                height="150"
+                style="border-radius: 50%; border: 5px solid #16548d"
+               
+              />
+              <!-- <button class="btn btn-primary">Change profile picture</button> -->
+            </div>
+          </div>
+         
+          <div class="row g-3 my-2">
+            <div class="col-md-3"  >
+              
+              <label for="inputFirst" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Last name"
+                id="inputFirst"
+                name="firstname"
+                readonly
+                
+               value={{obj?.userRef?.fname}}
+
+                />
+            </div>
+            <div class="col-md-3" >
+              <label for="inputLast" class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Last name"
+                id="inputLast"
+                name="lastname"
+                readonly
+                value={{obj?.userRef?.lname}}
+              />
+            </div>
+            <div class="col-md-6" >
+              <label for="inputEmail" class="form-label">Email</label>
+              <input type="email"
+               class="form-control"
+                id="inputEmail" 
+                readonly
+                value={{obj?.userRef?.email}}
+                />
+            </div>
+            <div class="col-md-4" >
+                <label for="inputLast" class="form-label">Phone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Last name"
+                  id="inputLast"
+                  name="lastname"
+                  readonly
+                  value={{obj?.userRef?.phoneNumber}}
+                />
+              </div>
+            <div class="col-md-4" >
+                <label for="inputLast" class="form-label">Age</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Last name"
+                  id="inputLast"
+                  name="lastname"
+                  readonly
+                  value={{obj?.userRef?.age}}
+                />
+              </div>
+            <div class="col-md-4">
+                <label for="inputLast" class="form-label">Salary</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Last name"
+                  id="inputLast"
+                  name="lastname"
+                  readonly
+                  value={{obj?.salary}}
+                />
+              </div>
+          </div>
+        </div>
+      </div>
+
+   
+   
+</div>
+
+</div>
+
+
+

@@ -17,7 +17,10 @@ export interface USER_LOGIN_TYPE{
     fname: string,
     id: string,
      lname: string,
-     userType:string
+     userType:string,
+     phone:string,
+     age:number,
+     salary:number
 
 
 }

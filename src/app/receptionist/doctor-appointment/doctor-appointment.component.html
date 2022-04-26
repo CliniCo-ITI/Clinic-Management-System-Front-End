@@ -1,0 +1,63 @@
+<div class="container-fluid mt-3 gap-5" id="content">
+
+
+    <!-- Sidebar  -->
+    <!-- <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Clinic Management system</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>Doctors Appointments</p>
+            <li>
+                <a [routerLink]="['/profile']" data-toggle="collapse">Profile</a>
+
+            </li>
+
+            <li class="nav-item dropdown" ngbDropdown>
+                <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" ngbDropdownToggle>
+                    Invoice
+                </a>
+                <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarScrollingDropdown">
+                    <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/list']">List</a></li>
+                    <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/add']">Add</a></li>
+                    <li ngbDropdownItem><a class="dropdown-item" [routerLink]="['/invoice/edit']">Edit</a></li>
+                </ul>
+            </li>
+            <li>
+                <a [routerLink]="['/doctorAppointment']" data-toggle="collapse">Doctors Appointment</a>
+            </li>
+
+        </ul>
+    </nav> -->
+
+    <div class="col-md-4 col-sm-12">
+      <app-sidebar></app-sidebar>
+    </div>
+    
+<table class="table table-hover table-bordered">
+    <thead >
+        <th>avaliable</th>
+        <th>clinic</th>
+        <th>doctor</th>
+        <th>patient</th>
+        <th>seen</th>
+        <th>time</th>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of appointments" >
+            <td>{{item.avaliable}}</td>
+            <td>{{item.clinic}}</td>
+            <td>{{item.doctor}}</td>
+            <td>{{item.patient}}</td>
+            <td>{{item.seen}}</td>
+            <td>{{item.time}}</td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+
