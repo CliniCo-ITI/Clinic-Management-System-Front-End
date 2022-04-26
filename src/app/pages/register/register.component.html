@@ -7,20 +7,20 @@
 
   <!-- File Input -->
     <div class="form-group">
-      <label for="exampleInputFirstName1" class="form-label">First name:</label>
-      <input type="text" class="form-control" name="fname" placeholder="as: Ahmed" [(ngModel)] = "newRecep.fname" required>
+      <label for="registerFname" class="form-label">First name:</label>
+      <input type="text" class="form-control" name="fname" placeholder="as: Ahmed" [(ngModel)] = "newPat.fname" required>
     </div>
     <div class="form-group">
       <label for="exampleInputLastName1" class="form-label">Last name:</label>
-      <input type="text" class="form-control" name="lname" placeholder="as: Mohammed" [(ngModel)] = "newRecep.lname"  required>
+      <input type="text" class="form-control" name="lname" placeholder="as: Mohammed" [(ngModel)] = "newPat.lname"  required>
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1" class="form-label">Email:</label>
-      <input type="email" class="form-control"name="email" placeholder="as: recep@recep.com" [(ngModel)] = "newRecep.email" required>
+      <input type="email" class="form-control"name="email" placeholder="as: recep@recep.com" [(ngModel)] = "newPat.email" required>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1" class="form-label">Password:</label>
-      <input type="password" class="form-control" name="password" placeholder="must contain letters and numbers/greater than 4 chars" [(ngModel)] = "newRecep.password" required>
+      <input type="password" class="form-control" name="password" placeholder="must contain letters and numbers/greater than 4 chars" [(ngModel)] = "newPat.password" required>
     </div>
     <div class="form-group">
       <label for="exampleInputImage1" class="form-label">Profile Image:</label>
@@ -29,23 +29,23 @@
     </div>
     <div class="form-group">
       <label for="exampleInputAge1" class="form-label">Age:</label>
-      <input type="text" class="form-control" name="age" placeholder="as: 25 etc." [(ngModel)] = "newRecep.age" required>
+      <input type="text" class="form-control" name="age" placeholder="as: 25 etc." [(ngModel)] = "newPat.age" required>
     </div>
     <div class="form-group">
       <label for="exampleInputPhoneNumber1" class="form-label">Phone Number:</label>
-      <input type="text" class="form-control" name="phoneNumber" placeholder="as: 010303399902" [(ngModel)] = "newRecep.phoneNumber" required>
+      <input type="text" class="form-control" name="phoneNumber" placeholder="as: 010303399902" [(ngModel)] = "newPat.phoneNumber" required>
     </div>
     <div class="form-group">
       <label for="exampleInputGender1" class="form-label">Gender:</label>
       <!-- <input name="gender"  type="text" class="form-control" placeholder="only in: F or M" [(ngModel)] = "newRecep.gender"  required> -->
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1"  [(ngModel)] = "newRecep.gender" value="M">
+        <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1"  [(ngModel)] = "newPat.gender" value="M">
         <label class="form-check-label" for="flexRadioDefault1">
           Male
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2" [(ngModel)] = "newRecep.gender" value="F">
+        <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2" [(ngModel)] = "newPat.gender" value="F">
         <label class="form-check-label" for="flexRadioDefault2">
           Female
         </label>
@@ -53,25 +53,24 @@
     </div>
     <div class="form-group">
       <!-- <label for="exampleInputuserType1" class="form-label">userType:</label> -->
-      <input name="userType"  type="text" class="form-control" placeholder="only: receptionist" [(ngModel)] = "newRecep.userType" type="hidden">
+      <input name="userType"  type="text" class="form-control" placeholder="only: patient" [(ngModel)] = "newPat.userType" type="hidden">
     </div>
     <div class="form-group">
-      <label for="exampleInputSalary1" class="form-label">Salary:</label>
-      <input name="salary" ngModel type="text" class="form-control" placeholder="as: 3000" [(ngModel)] = "newRecep.salary" required>
+      <label for="exampleInputSalary1" class="form-label">hasInsurance:</label>
+      <input name="hasInsurance" ngModel type="text" class="form-control" placeholder="as: true or false" [(ngModel)] = "newPat.hasInsurance" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputClinicid1" class="form-label">Insurance No:</label>
+      <input type="text" class="form-control" name="insuranceNumber" placeholder="as: 623e0df6a6a27481c540d337" [(ngModel)] = "newPat.insuranceNumber" >
     </div>
     <!-- <div class="form-group">
-      <label for="exampleInputClinicid1" class="form-label">ClinicId:</label>
-      <input type="text" class="form-control" name="clinic" placeholder="as: 623e0df6a6a27481c540d337" [(ngModel)] = "newRecep.clinicId" required>
-    </div> -->
-    <div class="form-group">
       <label for="exampleInputClinicid1" class="form-label">Clinic</label>
       <select name="clinic"  class="form-control" [(ngModel)] = "newRecep.clinicId" id="exampleInputClinicid1">
         <option *ngFor="let clinic of clinics" [value]="clinic._id" >{{clinic.governorate}}</option>
       </select>
-    </div>
+    </div> -->
     <div class="form-group">
       <button class="btn btn-primary" type="submit" > Submit </button>
     </div>
   </form>
 </div>
-

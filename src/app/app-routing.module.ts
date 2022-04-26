@@ -5,6 +5,7 @@ import { InvoiceListComponent } from './invoice/invoice-list/invoice-list.compon
 import { ProfileComponent } from './receptionist/profile/profile.component';
 import { SidebarComponent } from './receptionist/sidebar/sidebar.component';
 import { InvoicesComponent } from './receptionist/invoices/invoices.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
   {
@@ -17,8 +18,11 @@ const routes: Routes = [
   },
   { path: "receptionst"
   ,
-   component:ProfileComponent }
-
+   component:ProfileComponent },
+{
+    path:'register',
+    component:RegisterComponent
+  }
 ];
 
 @NgModule({

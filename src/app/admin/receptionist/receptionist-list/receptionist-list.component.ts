@@ -21,6 +21,7 @@ export class ReceptionistListComponent implements OnInit {
   deleteRecep(_id:string){
     this.recepService.deleteReceptionist(_id).subscribe({
       next:response => {console.log(response);}
+      
     })
   }
 

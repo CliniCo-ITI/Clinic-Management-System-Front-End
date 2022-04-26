@@ -32,6 +32,7 @@ import { DeleteMedicinComponent } from './medicine/delete-medicin/delete-medicin
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import * as i3 from "@angular/cdk/scrolling";
 import {TableModule} from 'primeng/table';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import {TableModule} from 'primeng/table';
     AddMedicinComponent,
     MedicineDetailsComponent,
     UpdateMedicinComponent,
-    DeleteMedicinComponent
+    DeleteMedicinComponent,
+    SideBarComponent
   ],
   imports: [
     CommonModule,

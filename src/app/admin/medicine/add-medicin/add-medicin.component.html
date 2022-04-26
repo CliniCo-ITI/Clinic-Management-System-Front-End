@@ -1,32 +1,26 @@
+<div class="row g-0">
+  <div id="sideNave" class="col-md-3 col-2">
+    <app-side-bar></app-side-bar>
+</div>
+<div class="col-md-9 col-10 medicin" >
+
 <h3>Add Medicin</h3>
-<table class="table table-success">
-  <thead>
-    <th>Name</th>
-    <th>productionDate</th>
-    <th>expirationDate</th>
-    <th>price</th>
-    <th>description</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <input type="text" [(ngModel)]="medicine.name" />
-      </td>
-      <td>
-        <input type="date" [(ngModel)]="medicine.productionDate"/>
-      </td>
-      <td>
-        <input type="date" [(ngModel)]="medicine.expirationDate" />
-      </td>
-      <td>
-        <input type="number" [(ngModel)]="medicine.price" />
-      </td>
-      <td>
-        <input type="text" [(ngModel)]="medicine.description" />
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+<label for="Name" class="form-label">Name</label>
+<input id="Name" class="form-control" [(ngModel)]="medicine.name" />
+
+<label for="productionDate" class="form-label" >ProductionDate</label>
+<input id="productionDate" class="form-control" type="date" [(ngModel)]="medicine.productionDate" />
+
+<label for="expirationDate" class="form-label">ExpirationDate</label>
+<input id="expirationDate" class="form-control" type="date" [(ngModel)]="medicine.expirationDate" />
+
+<label for="price" class="form-label">Price</label>
+<input id="price" class="form-control" [(ngModel)]="medicine.price" />
+
+<label for="description" class="form-label">Description</label>
+<input id="description" class="form-control" [(ngModel)]="medicine.description"  />
+
 
 <h3 class="mt-5">Assign medicines to Clinic</h3>
 
@@ -57,4 +51,5 @@
   </table>
   <button class="btn btn-success" (click)="save()">Add Medicine</button>
 </div>
-
+</div>
+</div>

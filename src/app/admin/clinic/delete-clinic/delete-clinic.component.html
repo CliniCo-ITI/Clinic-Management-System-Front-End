@@ -1,25 +1,31 @@
-<div *ngIf="clinic._id != ''">
-  <h3 class="my-5">Clinic Details</h3>
-  <table class="table table-danger">
-    <thead>
-      <th>ID</th>
-      <th>governorate</th>
-      <th>address</th>
-      <th>startTime</th>
-      <th>endTime</th>
-      <th>Operations</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{ clinic._id }}</td>
-        <td>{{ clinic.governorate }}</td>
-        <td>{{ clinic.address}}</td>
-        <td>{{clinic.startTime}}</td>
-        <td>{{clinic.endTime}}</td>
-        <td>
-          <button class="btn btn-danger" (click)="delete()">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+
+
+<div class="row g-0">
+  <div id="sideNave" class="col-md-3 col-2">
+<app-side-bar></app-side-bar>
+</div>
+<div class="col-md-9 col-10 clinic" >
+<div *ngIf="clinicId != ''">
+
+
+
+  <h3 class="mt-5">Delete Clinic</h3>
+  <label for="id" class="form-label">ID</label>
+  <input id="id" class="form-control" type="text" [(ngModel)]="clinic._id" />
+
+  <label for="governorate" class="form-label">Governorate</label>
+  <input id="governorate" class="form-control" type="text" [(ngModel)]="clinic.governorate" />
+
+  <label for="address" class="form-label">Address</label>
+  <input id="address" class="form-control" type="text"  [(ngModel)]="clinic.address" />
+
+  <label for="startTime" class="form-label">StartTime</label>
+  <input id="startTime" class="form-control" [(ngModel)]="clinic.startTime"/>
+
+  <label for="endTime" class="form-label">EndTime</label>
+  <input id="endTime" class="form-control" [(ngModel)]="clinic.endTime" />
+
+  <button class="btn btn-danger mt-3" (click)="delete()">Delete</button>
+</div>
+</div>
 </div>

@@ -1,4 +1,4 @@
-
+<!--
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" style="background-color: darkcyan;height:60px;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">cliniCo</a>
@@ -23,11 +23,11 @@
           <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Join Us</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" [routerLink]="['register']" routerLinkActive="router-link-active" >Register</a>
+            <a class="dropdown-item" [routerLink]="['login']" routerLinkActive="router-link-active">Login</a>
+            <a class="dropdown-item" (click)="logout()">Logout</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Separated link</a>
           </div>
@@ -42,4 +42,45 @@
 </nav>
 <div class="welcome">
 
-</div>
+</div> -->
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img
+        src="/assets/imgs/Clinico.png"
+        alt=""
+        width="30"
+        height="40"
+        class="d-inline-block align-text-top"
+      />
+      Clinico
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse show" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"> <i class="fa fa-home" aria-hidden="true"></i> Home</a>
+        </li>
+      </ul>
+      <div class="d-flex ">
+        <a *ngIf="!login()" [routerLink] = "['/login']" class="btn btn-default log-in"><i class="fa fa-sign-in"  aria-hidden="true"></i> Log in</a>
+        <a *ngIf="login()" (click)="logout()" class="btn btn-default log-in"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a>
+      </div>
+      <div class="d-flex ms-3">
+        <a *ngIf="!login()" [routerLink]="['/register']" class="btn btn-default log-in"><i class="fa fa-sign-in"  aria-hidden="true"></i> Register</a>
+      </div>
+    </div>
+  </div>
+</nav>

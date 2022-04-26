@@ -1,31 +1,26 @@
+<div class="row g-0">
+  <div id="sideNave" class="col-md-3 col-2">
+<app-side-bar></app-side-bar>
+</div>
+<div class="col-md-9 col-10 clinic" >
 <div *ngIf="clinicId != ''">
-  <h3>Update Clinic</h3>
-  <table class="table table-info">
-    <thead>
-      <th>governorate</th>
-      <th>Address</th>
-      <th>startTime</th>
-      <th>endTime</th>
-      <th>Operations</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <input type="text" [(ngModel)]="updateClinic.governorate"/>
-        </td>
-        <td>
-          <input type="text" [(ngModel)]="updateClinic.address" />
-        </td>
-        <td>
-          <input type="text" [(ngModel)]="updateClinic.startTime" />
-        </td>
-        <td>
-          <input type="text" [(ngModel)]="updateClinic.endTime" />
-        </td>
-        <td>
-          <button class="btn btn-info" (click)="update()">Update</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 class="mt-5">Update Clinic</h3>
+
+
+
+  <label for="governorate" class="form-label">Governorate</label>
+  <input id="governorate" class="form-control" type="text" [(ngModel)]="updateClinic.governorate" />
+
+  <label for="address" class="form-label">Address</label>
+  <input id="address" class="form-control" type="text"  [(ngModel)]="updateClinic.address" />
+
+  <label for="startTime" class="form-label">StartTime</label>
+  <input id="startTime" class="form-control" [(ngModel)]="updateClinic.startTime"/>
+
+  <label for="endTime" class="form-label">EndTime</label>
+  <input id="endTime" class="form-control" [(ngModel)]="updateClinic.endTime" />
+
+  <button class="btn btn-info mt-4" (click)="update()">Update</button>
+</div>
+</div>
 </div>

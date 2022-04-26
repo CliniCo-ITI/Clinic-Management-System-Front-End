@@ -1,44 +1,9 @@
-<!-- <div class="container">
-  <table *ngIf="medicines" class="table  table-hover">
-    <thead>
-      <tr>
-       <th>Name</th>
-       <th>productionDate</th>
-       <th>expirationDate</th>
-       <th>price</th>
-       <th>description:</th>
-       <th>clinics count</th>
-       <th>options</th>
 
-
-     </tr>
-    </thead>
-    <tr *ngFor="let medicine of medicines">
-      <td>{{medicine?.name}}</td>
-      <td>{{medicine?.productionDate|date:'shortDate'}}</td>
-      <td>{{medicine?.expirationDate|date:'shortDate'}}</td>
-      <td>{{medicine?.price}}</td>
-      <td>{{medicine?.description}}</td>
-      <td>{{medicine?.clinics.length}}</td>
-      <td>
-        <a routerLink="/admin/MedicinDetails/{{medicine._id }}" class="btn btn-info"
-          >Details</a
-        >
-        <a routerLink="/admin/editeMedicine/{{medicine._id }}" class="btn btn-warning"
-        >Update</a
-      >
-      <a
-        routerLink="/admin/deleteMedicine/{{medicine._id }}"
-        class="btn btn-danger text-black"
-        >Delete</a
-      >
-    </tr>
-  </table>
-  <button class="btn btn-success" (click)="add()">add Medicine</button>
-</div> -->
-
-
-<div class="container">
+<div class="row g-0">
+  <div id="sideNave" class="col-md-3 col-2">
+    <app-side-bar></app-side-bar>
+</div>
+<div class="col-md-9 col-10 medicin" >
 
 
   <h3 class=" text-capitalize text-secondary mb-5 mt-5">Medicins</h3>
@@ -79,4 +44,5 @@
   </p-table>
   <button class="btn btn-success mt-5" (click)="add()">add Medicine</button>
 
+</div>
 </div>

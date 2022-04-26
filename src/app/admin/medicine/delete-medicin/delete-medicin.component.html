@@ -1,26 +1,28 @@
-<div *ngIf="medicin._id != ''">
-  <h3>Medicin Details</h3>
-  <table class="table table-danger">
-    <thead>
-      <th>ID</th>
-      <th>Name</th>
-      <th>productionDate</th>
-      <th>expirationDate</th>
-      <th>price</th>
-      <th>description</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{ medicin._id }}</td>
-        <td>{{ medicin.name }}</td>
-        <td>{{ medicin.productionDate}}</td>
-        <td>{{medicin.expirationDate}}</td>
-        <td>{{medicin.price}}</td>
-        <td>{{medicin.description}}</td>
-        <td>
-          <button class="btn btn-danger" (click)="delete()">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+
+
+<div class="row g-0">
+  <div id="sideNave" class="col-md-3 col-2">
+<app-side-bar></app-side-bar>
 </div>
+<div class="col-md-9 col-10 medicin" >
+
+<h3 class="mt-5">Delete Medicin</h3>
+<label for="Name" class="form-label">Name</label>
+<input id="Name" class="form-control" [(ngModel)]="medicin.name" />
+
+<label for="productionDate" class="form-label" >ProductionDate</label>
+<input id="productionDate" class="form-control" type="date" [(ngModel)]=" medicin.productionDate"/>
+
+<label for="expirationDate" class="form-label">ExpirationDate</label>
+<input id="expirationDate" class="form-control" type="date" [(ngModel)]="medicin.expirationDate" />
+
+<label for="price" class="form-label">Price</label>
+<input id="price" class="form-control" [(ngModel)]="medicin.price" />
+
+<label for="description" class="form-label">Description</label>
+<input id="description" class="form-control" [(ngModel)]="medicin.description" />
+<button class="btn btn-danger mt-3" (click)="delete()">Delete</button>
+
+</div>
+</div>
+

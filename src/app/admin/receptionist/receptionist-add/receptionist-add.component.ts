@@ -60,7 +60,7 @@ export class ReceptionistAddComponent implements OnInit {
     formData.append('age', this.newRecep.age);
     formData.append('phoneNumber', this.newRecep.phoneNumber);
     formData.append('gender', this.newRecep.gender);
-    formData.append('userType',this.newRecep.userType);
+    formData.append('userType',"receptionist");
     formData.append('salary',this.newRecep.salary);
     formData.append('clinic',this.newRecep.clinicId);
     this.recepSer.addReceptionist(

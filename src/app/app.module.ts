@@ -18,17 +18,16 @@ import { LoginComponent } from './pages/login/login.component'
 import { Routes } from '@angular/router';
 import { ProfileComponent } from './receptionist/profile/profile.component';
 import { ReceptionistModule } from './receptionist/receptionist.module';
-
-// const routes: Routes = [
-//   { path: "receptionst", component: ProfileComponent }
-// ]
+import { RegisterComponent } from './pages/register/register.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ErrorComponent,
-    LoginComponent
+
+    LoginComponent,
+      RegisterComponent
   ],
   imports: [
   

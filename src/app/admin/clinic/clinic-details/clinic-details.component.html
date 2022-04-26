@@ -1,5 +1,10 @@
+<div class="row g-0">
+  <div id="sideNave" class="col-md-3 col-2">
+<app-side-bar></app-side-bar>
+</div>
+<div class="col-md-9 col-10 clinic">
 <div *ngIf="showClinc._id != ''">
-  <h3>Clinic Details</h3>
+  <h3 class="mt-5">Clinic Details</h3>
   <table class="table table-primary">
     <thead>
       <th>ID</th>
@@ -15,7 +20,6 @@
         <td>{{ showClinc.governorate }}</td>
         <td>{{ showClinc.address }}</td>
         <td>{{ showClinc.startTime }}</td>
-        <td>{{ showClinc.startTime }}</td>
         <td>{{ showClinc.endTime }}</td>
         <td>
           <button class="btn btn-primary" (click)="back()">Back to list</button>
@@ -23,4 +27,21 @@
       </tr>
     </tbody>
   </table>
+  <label for="governorate" class="form-label">ID</label>
+  <input id="governorate" class="form-control" type="text" [(ngModel)]="showClinc.governorate" />
+
+  <label for="governorate" class="form-label">Governorate</label>
+  <input id="governorate" class="form-control" type="text" [(ngModel)]="showClinc.governorate" />
+
+  <label for="address" class="form-label">Address</label>
+  <input id="address" class="form-control" type="text" [(ngModel)]="showClinc.address" />
+
+  <label for="startTime" class="form-label">StartTime</label>
+  <input id="startTime" class="form-control" [(ngModel)]="showClinc.startTime" />
+
+  <label for="endTime" class="form-label">EndTime</label>
+  <input id="endTime" class="form-control" [(ngModel)]="showClinc.endTime" />
+  <button class="btn btn-primary mt-3" (click)="back()">Back to list</button>
+</div>
+</div>
 </div>

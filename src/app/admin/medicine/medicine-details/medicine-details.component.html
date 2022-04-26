@@ -1,28 +1,32 @@
-<div *ngIf="showMedicin._id != ''">
-  <h3>Clinic Details</h3>
-  <table class="table table-primary">
-    <thead>
-      <th>ID</th>
-      <th>Name</th>
-      <th>productionDate</th>
-      <th>expirationDate</th>
-      <th>price</th>
-      <th>description</th>
-      <th>clinics Count</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{ showMedicin._id }}</td>
-        <td>{{ showMedicin.name }}</td>
-        <td>{{ showMedicin.productionDate}}</td>
-        <td>{{ showMedicin.expirationDate }}</td>
-        <td>{{ showMedicin.price }}</td>
-        <td>{{ showMedicin.description }}</td>
-        <td>{{ showMedicin.clinics.length}}</td>
-        <td>
-          <button class="btn btn-primary" (click)="back()">Back to list</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="row g-0">
+  <div id="sideNave" class="col-md-3 col-2">
+<app-side-bar></app-side-bar>
+</div>
+<div class="col-md-9 col-10 medicine" >
+
+
+<h3 class="mt-5">Medicin Details</h3>
+<label for="showMedicin._id" class="form-label">Name</label>
+<input id="showMedicin._id" class="form-control" [(ngModel)]="showMedicin._id  " />
+
+<label for="Name" class="form-label">Name</label>
+<input id="Name" class="form-control" [(ngModel)]="showMedicin.name " />
+
+<label for="productionDate" class="form-label" >ProductionDate</label>
+<input id="productionDate" class="form-control" type="date" [(ngModel)]="showMedicin.productionDate" />
+
+<label for="expirationDate" class="form-label">ExpirationDate</label>
+<input id="expirationDate" class="form-control" type="date" [(ngModel)]="showMedicin.expirationDate" />
+
+<label for="price" class="form-label">Price</label>
+<input id="price" class="form-control" [(ngModel)]="showMedicin.price" />
+
+<label for="description" class="form-label">Description</label>
+<input id="description" class="form-control" [(ngModel)]="showMedicin.description"  />
+
+<label for="showMedicin.clinics.length" class="form-label">showMedicin.clinics.length</label>
+<input id="showMedicin.clinics.length" class="form-control" [(ngModel)]="showMedicin.name " />
+
+<button class="btn btn-primary mt-4" (click)="back()">Back to list</button>
+</div>
 </div>

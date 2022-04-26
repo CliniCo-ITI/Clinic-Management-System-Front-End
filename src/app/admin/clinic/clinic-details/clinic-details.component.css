@@ -1,0 +1,15 @@
+.clinic{
+  background-color: #F4F9F9;
+  /* height: 1000px; */
+}
+
+input,label,h3{
+  width: 500px;
+  margin-left: 20px;
+}
+
+button{
+  margin-left: 20px;
+}
+
+

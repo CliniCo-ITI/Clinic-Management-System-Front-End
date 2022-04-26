@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'app/shared/user.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -6,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userSer:UserService) { }
 
   ngOnInit(): void {
+  }
+  login(){
+    return this.userSer.userExist();
+  }
+  logout(){
+    this.userSer.clear();
+
   }
 
 }
