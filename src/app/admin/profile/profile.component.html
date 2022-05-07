@@ -1,1 +1,25 @@
+<div class="row g-0">
+  <div id="sideNave" class="col-md-3 col-2">
+    <app-side-bar></app-side-bar>
+  </div>
 
+  <div class="col-md-9 col-10 clinic" >
+    <h2 class="mt-2 mb-2 text-center">Welcome, {{this.retrievedAdmin?.fname}}</h2>
+    <div class="card shadow" style="width: 25rem; margin: 20px auto; border:none;" >
+      <img src="{{this.baseUrl + this.retrievedAdmin?.image}}" class="card-img-top" alt="..." style="border-radius:50%; width: 200px; height: 200px;margin: 5px auto;">
+      <div class="card-body">
+        <h5 class="card-title">{{this.retrievedAdmin?.fname}} {{this.retrievedAdmin?.lname}}</h5>
+        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">email: {{this.retrievedAdmin?.email}}</li>
+        <li class="list-group-item">phone: {{this.retrievedAdmin?.phoneNumber}}</li>
+        <li class="list-group-item">age: {{this.retrievedAdmin?.age}}</li>
+      </ul>
+      <!-- <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div> -->
+    </div>
+  </div>
+</div>

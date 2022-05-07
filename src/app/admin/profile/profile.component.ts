@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// import { UserService } from 'app/shared/user.service';
+import { User } from './../../models/user';
+import { UserService } from 'app/shared/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor() { }
+  public baseUrl:string = 'http://localhost:8080/';
+  public retrievedAdmin:User|null = new User("","","","","","",20,"","","") ;
+  constructor(public userSer:UserService) { }
 
   ngOnInit(): void {
-  }
+    this.userSer.getAdminById().subscribe({
+      next : data => {this.retrievedAdmin = data;console.log(this.retrievedAdmin);console.log(this.retrievedAdmin?.image)}
+    })
 
+  }
+  getProfileData(){
+
+  }
 }
