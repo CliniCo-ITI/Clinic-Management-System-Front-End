@@ -35,6 +35,7 @@ export class ClinicService {
   addClinc(clinic:Clinc){
     return this.http.post<Clinc>(this.baseUrl,clinic,{
       headers:{
+        'content-Type': 'application/json',
        authorization: this.userLoginSer.getUserToken(),
       }
     })

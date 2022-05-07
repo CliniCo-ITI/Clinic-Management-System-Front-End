@@ -19,6 +19,10 @@ export class LoginService {
         if(data.user.userType=='admin'){
           this.router.navigate(['/admin']);
         }
+        if(data.user.userType=='receptionist'){
+          this.router.navigate(['/receptionst']);
+        }
+
 
      },
      (err) => console.log(err)

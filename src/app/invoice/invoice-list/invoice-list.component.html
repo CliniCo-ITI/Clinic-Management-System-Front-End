@@ -1,0 +1,48 @@
+
+
+<div class="container-fluid mt-3 gap-5" id="list-invoice">
+
+
+   
+
+    <div class="col-md-4 col-sm-12">
+        <app-sidebar></app-sidebar>
+      </div>
+
+
+    
+    
+
+
+<table class="table table-hover table-bordered">
+    <thead >
+        <!-- <th>Id</th> -->
+        <th>Payment Method</th>
+        <th>Total Amount</th>
+        <th>Total Paid</th>
+        <th>Amount Left</th>
+        <th>Operation</th>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of invs">
+            <!-- <td>{{item._id}}</td> -->
+            <td>{{item.paymentMethod}}</td>
+            <td>{{item.totalAmount}}</td>
+            <td>{{item.totalPaid}}</td>
+            <td>{{item.amountLeft}}</td>
+            <td>
+                <a routerLink="/invoice/edit/{{item._id}}" id="edit">Edit</a>
+
+                
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<!-- ============================================================== -->
+
+
+</div>
